@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/alertDetailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:text="@string/alerts_details_title"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+   <LinearLayout
+    	android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+    	android:layout_gravity="top"
+    	android:orientation="horizontal" >
+   		<TextView 
+       		android:layout_width="0dip"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center"
+        	android:layout_weight="1"
+        	android:text="@string/alertPriceTxt" />
+   		<EditText 
+   		    android:layout_width="0dip"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="right"
+        	android:layout_weight="3"
+        	android:hint="@string/alertPriceValueTxt"
+         />
+	</LinearLayout> 
+    <LinearLayout
+    	android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+    	android:layout_gravity="bottom"
+    	android:orientation="horizontal" >
+    
+        <Button 
+        	android:id="@+id/cancelAlertButtonView"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/addAlert"
+        	android:layout_gravity="left|bottom"
+        	android:layout_weight="0.6"
+        />
+
+        <Button
+            android:id="@+id/okAlertsButtonView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          	android:layout_gravity="right|bottom"
+            android:text="@string/deleteAlert" 
+        	android:layout_weight="0.6"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

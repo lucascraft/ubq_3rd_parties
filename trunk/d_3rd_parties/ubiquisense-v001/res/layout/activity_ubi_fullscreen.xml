@@ -1,0 +1,124 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    android:textAlignment="center"
+    tools:context=".UbiFullscreenActivity" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text="@string/dummy_content"
+        android:textColor="#33b5e5"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+    
+ 
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+		<LinearLayout
+            android:id="@+id/fullscreen_content_ticker"
+            style="?buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+	       <TextView
+	            android:id="@+id/textTicker"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center|top"
+	            android:gravity="top|center"
+	            android:text="@string/ticker_text"
+	            android:textAlignment="center"
+	            android:textAppearance="?android:attr/textAppearanceLarge"
+	            android:textSize="14sp" 
+	       />
+		</LinearLayout>
+		<LinearLayout
+            android:id="@+id/fullscreen_content_charts"
+            style="?buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+			<com.ubiquisense.view.CandleStickChart
+		    	android:id="@+id/candlestickchart"
+		    	android:layout_width="fill_parent"
+		   		android:layout_height="360dip"
+		    	android:gravity="bottom|center"
+		    	android:keepScreenOn="true" 
+		    />
+		</LinearLayout>
+		<LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+            <Button
+                android:id="@+id/charts_button"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nav_charts" />
+
+            <Button
+                android:id="@+id/alerts_button"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nav_alerts" />
+
+           <Button
+                android:id="@+id/bots_button"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nav_bots" />
+
+           <Button
+                android:id="@+id/settings_button"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nav_settings" />
+            
+            <Button
+                android:id="@+id/usb_button"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nav_usb" />
+            </LinearLayout>
+    </FrameLayout>
+</FrameLayout>
