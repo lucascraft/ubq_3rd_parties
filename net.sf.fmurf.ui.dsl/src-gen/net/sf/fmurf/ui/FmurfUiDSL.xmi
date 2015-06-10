@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xtext="http://www.eclipse.org/2008/Xtext">
+  <xtext:Grammar name="net.sf.fmurf.ui.FmurfUiDSL" usedGrammars="/1">
+    <metamodelDeclarations xsi:type="xtext:GeneratedMetamodel" name="fmurfUiDSL">
+      <ePackage href="http://www.sf.net/fmurf/ui/FmurfUiDSL#/"/>
+    </metamodelDeclarations>
+    <rules xsi:type="xtext:ParserRule" name="FMFUI">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFUI"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" feature="settings" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="*" feature="fiducials" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Fiducial">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//Fiducial"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="fiducial"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=":"/>
+        <elements xsi:type="xtext:Assignment" feature="uid" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Keyword" value="style:"/>
+        <elements xsi:type="xtext:Assignment" feature="style" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="kind:"/>
+        <elements xsi:type="xtext:Assignment" feature="kind" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="foreground:"/>
+        <elements xsi:type="xtext:Assignment" feature="fg" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="background:"/>
+        <elements xsi:type="xtext:Assignment" feature="bg" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="radius:"/>
+        <elements xsi:type="xtext:Assignment" feature="radius" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="proxima:"/>
+        <elements xsi:type="xtext:Assignment" feature="proxima" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="proximaVisible:"/>
+        <elements xsi:type="xtext:Assignment" feature="proximaVisible" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="function:"/>
+        <elements xsi:type="xtext:Assignment" feature="function" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="range:"/>
+        <elements xsi:type="xtext:Assignment" feature="range" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="FMFSettings">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFSettings"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="settings : {"/>
+        <elements xsi:type="xtext:Keyword" value="OscReceivePort:"/>
+        <elements xsi:type="xtext:Assignment" feature="oscReceivePort" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="OscSendAddress:"/>
+        <elements xsi:type="xtext:Assignment" feature="oscSendAddress" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="OscSendPort:"/>
+        <elements xsi:type="xtext:Assignment" feature="oscSendPort" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="TuioPort:"/>
+        <elements xsi:type="xtext:Assignment" feature="tuioPort" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="liveRate:"/>
+        <elements xsi:type="xtext:Assignment" feature="liveRate" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="processingRate:"/>
+        <elements xsi:type="xtext:Assignment" feature="processingRate" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:EnumRule" name="FMFProximaVisibleEnum">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EEnum" href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFProximaVisibleEnum"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFProximaVisibleEnum/VISIBLE"/>
+          <literal value="VISIBLE"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFProximaVisibleEnum/HIDDEN"/>
+          <literal value="HIDDEN"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:EnumRule" name="FMFFidStyleEnum">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EEnum" href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidStyleEnum"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidStyleEnum/DISC"/>
+          <literal value="DISC"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidStyleEnum/SQUARE"/>
+          <literal value="SQUARE"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidStyleEnum/PENTAGON"/>
+          <literal value="PENTAGON"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidStyleEnum/HEXAGON"/>
+          <literal value="HEXAGON"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidStyleEnum/EIGHTSTAR"/>
+          <literal value="EIGHTSTAR"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:EnumRule" name="FMFKind">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EEnum" href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFKind"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFKind/SIN_OSC"/>
+          <literal value="SIN_OSC"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFKind/SQR_OSC"/>
+          <literal value="SQR_OSC"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFKind/PULSE_OSC"/>
+          <literal value="PULSE_OSC"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFKind/TRI_OSC"/>
+          <literal value="TRI_OSC"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFKind/SAW_OSC"/>
+          <literal value="SAW_OSC"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFKind/SEQUENCER"/>
+          <literal value="SEQUENCER"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFKind/SAMPLER"/>
+          <literal value="SAMPLER"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFKind/ECHO"/>
+          <literal value="ECHO"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFKind/REVERB"/>
+          <literal value="REVERB"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:EnumRule" name="FMFFidFunctionEnum">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EEnum" href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidFunctionEnum"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidFunctionEnum/KNOB"/>
+          <literal value="KNOB"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidFunctionEnum/NONE"/>
+          <literal value="NONE"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:EnumRule" name="FMFFidKind">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EEnum" href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidKind"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidKind/SinOsc"/>
+          <literal value="SinOsc"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidKind/SqrOsc"/>
+          <literal value="SqrOsc"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidKind/TriOsc"/>
+          <literal value="TriOsc"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidKind/SawOsc"/>
+          <literal value="SawOsc"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidKind/PulseOsc"/>
+          <literal value="PulseOsc"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidKind/Phasor"/>
+          <literal value="Phasor"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidKind/Sequencer"/>
+          <literal value="Sequencer"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidKind/Sampler"/>
+          <literal value="Sampler"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidKind/Reverb"/>
+          <literal value="Reverb"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidKind/Echo"/>
+          <literal value="Echo"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:EnumRule" name="FMFFidColorEnum">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EEnum" href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Aquamarine"/>
+          <literal value="Aquamarine"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Bakers_Chocolate"/>
+          <literal value="Bakers_Chocolate"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Black"/>
+          <literal value="Black"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Blue"/>
+          <literal value="Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Brass"/>
+          <literal value="Brass"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Bright_Gold"/>
+          <literal value="Bright_Gold"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Brown"/>
+          <literal value="Brown"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Bronze"/>
+          <literal value="Bronze"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Gold"/>
+          <literal value="Gold"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Grey"/>
+          <literal value="Grey"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Green"/>
+          <literal value="Green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Copper"/>
+          <literal value="Copper"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Coral"/>
+          <literal value="Coral"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Cyan"/>
+          <literal value="Cyan"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Dark_Green"/>
+          <literal value="Dark_Green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Green_Yellow"/>
+          <literal value="Green_Yellow"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Magenta"/>
+          <literal value="Magenta"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Maroon"/>
+          <literal value="Maroon"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Medium_Blue"/>
+          <literal value="Medium_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Sienna"/>
+          <literal value="Sienna"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Silver"/>
+          <literal value="Silver"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Salmon"/>
+          <literal value="Salmon"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Orange"/>
+          <literal value="Orange"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Pink"/>
+          <literal value="Pink"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Red"/>
+          <literal value="Red"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Summer_Sky"/>
+          <literal value="Summer_Sky"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Tan"/>
+          <literal value="Tan"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Thistle"/>
+          <literal value="Thistle"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Turquoise"/>
+          <literal value="Turquoise"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Very_Dark_Brown"/>
+          <literal value="Very_Dark_Brown"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Very_Light_Grey"/>
+          <literal value="Very_Light_Grey"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Violet"/>
+          <literal value="Violet"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Violet_Red"/>
+          <literal value="Violet_Red"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Wheat"/>
+          <literal value="Wheat"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/White"/>
+          <literal value="White"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Yellow"/>
+          <literal value="Yellow"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Yellow_Green"/>
+          <literal value="Yellow_Green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Dark_Yellow"/>
+          <literal value="Dark_Yellow"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Bronze_II"/>
+          <literal value="Bronze_II"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Cadet_Blue"/>
+          <literal value="Cadet_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Cool_Copper"/>
+          <literal value="Cool_Copper"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Corn_Flower_Blue"/>
+          <literal value="Corn_Flower_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Dark_Brown"/>
+          <literal value="Dark_Brown"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Dark_Green_Copper"/>
+          <literal value="Dark_Green_Copper"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Dark_Olive_Green"/>
+          <literal value="Dark_Olive_Green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Dark_Orchid"/>
+          <literal value="Dark_Orchid"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Dark_Purple"/>
+          <literal value="Dark_Purple"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Dark_Slate_Blue"/>
+          <literal value="Dark_Slate_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Dark_Turquoise"/>
+          <literal value="Dark_Turquoise"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Dark_Tan"/>
+          <literal value="Dark_Tan"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Dark_Wood"/>
+          <literal value="Dark_Wood"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Dim_Grey"/>
+          <literal value="Dim_Grey"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Dusty_Rose"/>
+          <literal value="Dusty_Rose"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Feldspar"/>
+          <literal value="Feldspar"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Firebrick"/>
+          <literal value="Firebrick"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Forest_Green"/>
+          <literal value="Forest_Green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Goldenrod"/>
+          <literal value="Goldenrod"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Green_Copper"/>
+          <literal value="Green_Copper"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Hunter_Green"/>
+          <literal value="Hunter_Green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Indian_Red"/>
+          <literal value="Indian_Red"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Khaki"/>
+          <literal value="Khaki"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Light_Blue"/>
+          <literal value="Light_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Light_Grey"/>
+          <literal value="Light_Grey"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Light_Steel_Blue"/>
+          <literal value="Light_Steel_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Light_Wood"/>
+          <literal value="Light_Wood"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Lime_Green"/>
+          <literal value="Lime_Green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Mandarian_Orange"/>
+          <literal value="Mandarian_Orange"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Medium_Aquamarine"/>
+          <literal value="Medium_Aquamarine"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Medium_Forest_Green"/>
+          <literal value="Medium_Forest_Green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Medium_Goldenrod"/>
+          <literal value="Medium_Goldenrod"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Medium_Orchid"/>
+          <literal value="Medium_Orchid"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Medium_Sea_Green"/>
+          <literal value="Medium_Sea_Green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Medium_Slate_Blue"/>
+          <literal value="Medium_Slate_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Medium_Spring_Green"/>
+          <literal value="Medium_Spring_Green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Medium_Turquoise"/>
+          <literal value="Medium_Turquoise"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Medium_Violet_Red"/>
+          <literal value="Medium_Violet_Red"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Medium_Wood"/>
+          <literal value="Medium_Wood"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Midnight_Blue"/>
+          <literal value="Midnight_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Navy_Blue"/>
+          <literal value="Navy_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Neon_Blue"/>
+          <literal value="Neon_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Neon_Pink"/>
+          <literal value="Neon_Pink"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/New_Midnight_Blue"/>
+          <literal value="New_Midnight_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/New_Tan"/>
+          <literal value="New_Tan"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Old_Gold"/>
+          <literal value="Old_Gold"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Orange_Red"/>
+          <literal value="Orange_Red"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Orchid"/>
+          <literal value="Orchid"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Pale_Green"/>
+          <literal value="Pale_Green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Plum"/>
+          <literal value="Plum"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Quartz"/>
+          <literal value="Quartz"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Rich_Blue"/>
+          <literal value="Rich_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Scarlet"/>
+          <literal value="Scarlet"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Sea_Green"/>
+          <literal value="Sea_Green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Semi_Sweet_Chocolate"/>
+          <literal value="Semi_Sweet_Chocolate"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Sky_Blue"/>
+          <literal value="Sky_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Slate_Blue"/>
+          <literal value="Slate_Blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Spicy_Pink"/>
+          <literal value="Spicy_Pink"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Spring_Green"/>
+          <literal value="Spring_Green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.sf.net/fmurf/ui/FmurfUiDSL#//FMFFidColorEnum/Steel_Blue"/>
+          <literal value="Steel_Blue"/>
+        </elements>
+      </alternatives>
+    </rules>
+  </xtext:Grammar>
+  <xtext:Grammar name="org.eclipse.xtext.common.Terminals" definesHiddenTokens="true" hiddenTokens="/1/@rules.5 /1/@rules.3 /1/@rules.4">
+    <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="ecore">
+      <ePackage href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    </metamodelDeclarations>
+    <rules xsi:type="xtext:TerminalRule" name="ID">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" cardinality="?" value="^"/>
+        <elements xsi:type="xtext:Alternatives">
+          <elements xsi:type="xtext:CharacterRange">
+            <left value="a"/>
+            <right value="z"/>
+          </elements>
+          <elements xsi:type="xtext:CharacterRange">
+            <left value="A"/>
+            <right value="Z"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="_"/>
+        </elements>
+        <elements xsi:type="xtext:Alternatives" cardinality="*">
+          <elements xsi:type="xtext:CharacterRange">
+            <left value="a"/>
+            <right value="z"/>
+          </elements>
+          <elements xsi:type="xtext:CharacterRange">
+            <left value="A"/>
+            <right value="Z"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="_"/>
+          <elements xsi:type="xtext:CharacterRange">
+            <left value="0"/>
+            <right value="9"/>
+          </elements>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="INT">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </type>
+      <alternatives xsi:type="xtext:CharacterRange" cardinality="+">
+        <left value="0"/>
+        <right value="9"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="STRING">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Keyword" value="&quot;"/>
+          <elements xsi:type="xtext:Alternatives" cardinality="*">
+            <elements xsi:type="xtext:Group">
+              <elements xsi:type="xtext:Keyword" value="\"/>
+              <elements xsi:type="xtext:Alternatives">
+                <elements xsi:type="xtext:Keyword" value="b"/>
+                <elements xsi:type="xtext:Keyword" value="t"/>
+                <elements xsi:type="xtext:Keyword" value="n"/>
+                <elements xsi:type="xtext:Keyword" value="f"/>
+                <elements xsi:type="xtext:Keyword" value="r"/>
+                <elements xsi:type="xtext:Keyword" value="&quot;"/>
+                <elements xsi:type="xtext:Keyword" value="'"/>
+                <elements xsi:type="xtext:Keyword" value="\"/>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:NegatedToken">
+              <terminal xsi:type="xtext:Alternatives">
+                <elements xsi:type="xtext:Keyword" value="\"/>
+                <elements xsi:type="xtext:Keyword" value="&quot;"/>
+              </terminal>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="&quot;"/>
+        </elements>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Keyword" value="'"/>
+          <elements xsi:type="xtext:Alternatives" cardinality="*">
+            <elements xsi:type="xtext:Group">
+              <elements xsi:type="xtext:Keyword" value="\"/>
+              <elements xsi:type="xtext:Alternatives">
+                <elements xsi:type="xtext:Keyword" value="b"/>
+                <elements xsi:type="xtext:Keyword" value="t"/>
+                <elements xsi:type="xtext:Keyword" value="n"/>
+                <elements xsi:type="xtext:Keyword" value="f"/>
+                <elements xsi:type="xtext:Keyword" value="r"/>
+                <elements xsi:type="xtext:Keyword" value="&quot;"/>
+                <elements xsi:type="xtext:Keyword" value="'"/>
+                <elements xsi:type="xtext:Keyword" value="\"/>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:NegatedToken">
+              <terminal xsi:type="xtext:Alternatives">
+                <elements xsi:type="xtext:Keyword" value="\"/>
+                <elements xsi:type="xtext:Keyword" value="'"/>
+              </terminal>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="'"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="ML_COMMENT">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="/*"/>
+        <elements xsi:type="xtext:UntilToken">
+          <terminal xsi:type="xtext:Keyword" value="*/"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="SL_COMMENT">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="//"/>
+        <elements xsi:type="xtext:NegatedToken" cardinality="*">
+          <terminal xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+            <elements xsi:type="xtext:Keyword" value="&#xD;"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" cardinality="?" value="&#xD;"/>
+          <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="WS">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives" cardinality="+">
+        <elements xsi:type="xtext:Keyword" value=" "/>
+        <elements xsi:type="xtext:Keyword" value="&#x9;"/>
+        <elements xsi:type="xtext:Keyword" value="&#xD;"/>
+        <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="ANY_OTHER">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Wildcard"/>
+    </rules>
+  </xtext:Grammar>
+</xmi:XMI>

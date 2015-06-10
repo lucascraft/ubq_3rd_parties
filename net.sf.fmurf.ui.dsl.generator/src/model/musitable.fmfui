@@ -1,0 +1,240 @@
+settings : {
+		OscReceivePort: 4444
+		OscSendAddress: 'localhost'
+		OscSendPort: 4445
+		TuioPort: 3333
+		liveRate: 50
+		processingRate: 50
+}
+
+fiducial fid0 : 0 {
+	style: DISC
+	kind: SIN_OSC
+	foreground: Red 
+	background: Red 
+	radius: 70
+	proxima: 200
+	proximaVisible: VISIBLE
+	function: KNOB
+	range: 400
+}
+fiducial fid1 : 1 {
+	style:DISC
+	kind: SAW_OSC
+	foreground:Blue
+	background: Yellow
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid2 : 2 {
+	style:DISC
+	kind: TRI_OSC
+	foreground:Blue
+	background: Red
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid3 : 3 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Green
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid4 : 4 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Blue
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid5 : 5 {
+	style:DISC
+	kind: TRI_OSC
+	foreground:Blue
+	background: Red
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid6 : 6 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Yellow
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid7 : 7 {
+	style:DISC
+	kind: TRI_OSC
+	foreground:Blue
+	background: Red
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid8 : 8 {
+	style:DISC
+	kind: ECHO
+	foreground:Blue
+	background: Green
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid9 : 9 {
+	style:DISC
+	kind: SQR_OSC
+	foreground:Blue
+	background: Red
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid10 : 10 {
+	style:DISC
+	kind: SQR_OSC
+	foreground:Blue
+	background: Yellow
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid11 : 11 {
+	style:DISC
+	kind: SAW_OSC
+	foreground:Blue
+	background: Red
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid12 : 12 {
+	style:DISC
+	kind: SAW_OSC
+	foreground:Blue
+	background: Green
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid13 : 13 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Red
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid14 : 14 {
+	style:DISC
+	kind: SQR_OSC
+	foreground:Blue
+	background: Yellow
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid15 : 15 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Red
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid16 : 16 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Yellow
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid17 : 17 {
+	style:DISC
+	kind: REVERB
+	foreground:Blue
+	background: Green
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid18 : 18 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Red
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid19 : 19 {
+	style:DISC
+	kind: TRI_OSC
+	foreground:Blue
+	background: Yellow
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}
+fiducial fid20 : 20 {
+	style:DISC
+	kind: REVERB
+	foreground:Blue
+	background: Green
+	radius:70
+	proxima:200
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 400
+}

@@ -1,0 +1,154 @@
+import fmurfUiDSL;
+
+getChuckUGenSettingsFromFiducialKind(Fiducial this) :
+	let fidKind = this.kind :
+		switch(this.kind) {
+			case FMFKind::SIN_OSC:
+				"\n" +"2 => fid" + this.uid + ".sync;" + "\n" +
+				"1 => fid" + this.uid + "Gain => fid" + this.uid + ".gain;" + "\n"
+			case FMFKind::SQR_OSC:
+				"\n" +"2 => fid" + this.uid + ".sync;" + "\n" +
+				"1 => fid" + this.uid + "Gain => fid" + this.uid + ".gain;" + "\n"
+			case FMFKind::TRI_OSC:
+				"\n" +"2 => fid" + this.uid + ".sync;" + "\n" +
+				"1 => fid" + this.uid + "Gain => fid" + this.uid + ".gain;" + "\n"
+			case FMFKind::SAW_OSC:
+				"\n" +"2 => fid" + this.uid + ".sync;" + "\n" +
+				"1 => fid" + this.uid + "Gain => fid" + this.uid + ".gain;" + "\n"
+			case FMFKind::SAMPLER:
+				"\n" +"\"/gitSmurf/fmurf/3rdParties/samples/bank_01/01_sax.wav\" => fid" + this.uid + ".read;" + "\n" +
+				"0 => fid8.pos;" + "\n" +
+				"20 => fid" + this.uid + "Gain => fid8.gain;" + "\n" +
+				"1 => fid8.rate;" + "\n" +
+				"1 => fid8.loop;" + "\n"
+			case FMFKind::ECHO:
+				""
+			case FMFKind::REVERB:
+				""			
+			default:
+				"Undefined"	
+		};
+		
+getChuckUAnaNameFromFiducialKind(Fiducial this) :
+	let fidKind = this.kind :
+		switch(this.kind) {
+			case FMFKind::SIN_OSC:
+				"SinOsc"
+			case FMFKind::SQR_OSC:
+				"SqrOsc"
+			case FMFKind::TRI_OSC:
+				"TriOsc"
+			case FMFKind::SAW_OSC:
+				"SawOsc"
+			case FMFKind::SAMPLER:
+				"SndBuf"
+			case FMFKind::ECHO:
+				"Echo"
+			case FMFKind::REVERB:
+				"JCRev"			
+			default:
+				"Undefined"	
+		};
+		
+isOscGainCompatible(Fiducial this) :
+	let fidKind = this.kind :
+		switch(this.kind) {
+			case FMFKind::SIN_OSC:
+				true
+			case FMFKind::SQR_OSC:
+				true
+			case FMFKind::TRI_OSC:
+				true
+			case FMFKind::SAW_OSC:
+				true
+			case FMFKind::SAMPLER:
+				true
+			case FMFKind::ECHO:
+				false
+			case FMFKind::REVERB:
+				false
+			default:
+				false	
+		};
+		
+getOscGainFromKind(Fiducial this) :
+	let fidKind = this.kind :
+		switch(this.kind) {
+			case FMFKind::SIN_OSC:
+				25
+			case FMFKind::SQR_OSC:
+				25
+			case FMFKind::TRI_OSC:
+				25
+			case FMFKind::SAW_OSC:
+				25
+			case FMFKind::SAMPLER:
+				1
+			default:
+				0	
+		};
+		
+isOscFreqCompatible(Fiducial this) :
+	let fidKind = this.kind :
+		switch(this.kind) {
+			case FMFKind::SIN_OSC:
+				true
+			case FMFKind::SQR_OSC:
+				true
+			case FMFKind::TRI_OSC:
+				true
+			case FMFKind::SAW_OSC:
+				true
+			case FMFKind::SAMPLER:
+				false
+			case FMFKind::ECHO:
+				false
+			case FMFKind::REVERB:
+				false
+			default:
+				false
+		};
+		
+isUGenRateCompatible(Fiducial this) :
+	let fidKind = this.kind :
+		switch(this.kind) {
+			case FMFKind::SIN_OSC:
+				false
+			case FMFKind::SQR_OSC:
+				false
+			case FMFKind::TRI_OSC:
+				false
+			case FMFKind::SAW_OSC:
+				false
+			case FMFKind::SAMPLER:
+				true
+			case FMFKind::ECHO:
+				false
+			case FMFKind::REVERB:
+				false
+			default:
+				false
+		};
+		
+isUGenPosCompatible(Fiducial this) :
+	let fidKind = this.kind :
+		switch(this.kind) {
+			case FMFKind::SIN_OSC:
+				false
+			case FMFKind::SQR_OSC:
+				false
+			case FMFKind::TRI_OSC:
+				false
+			case FMFKind::SAW_OSC:
+				false
+			case FMFKind::SAMPLER:
+				true
+			case FMFKind::ECHO:
+				false
+			case FMFKind::REVERB:
+				false
+			default:
+				false
+		};
+		
+		

@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: net.sf.fmurf.ui.dsl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: net.sf.fmurf.ui.dsl; singleton:=true
+Eclipse-RegisterBuddy: org.eclipse.xtext.log4j
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.generator;resolution:=optional,
+ de.itemis.xtext.antlr;resolution:=optional,
+ org.apache.commons.logging;resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.xtext.log4j;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe.core;resolution:=optional,
+ com.ibm.icu;resolution:=optional,
+ org.eclipse.xtext.xtend;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.antlr.runtime,
+ org.apache.log4j
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: net.sf.fmurf.ui,
+ net.sf.fmurf.ui.services,
+ net.sf.fmurf.ui.fmurfUiDSL,
+ net.sf.fmurf.ui.fmurfUiDSL.impl,
+ net.sf.fmurf.ui.fmurfUiDSL.util,
+ net.sf.fmurf.ui.parseTreeConstruction,
+ net.sf.fmurf.ui.parser.antlr,
+ net.sf.fmurf.ui.validation,
+ net.sf.fmurf.ui.parser.antlr.internal
+Import-Package: org.apache.log4j
