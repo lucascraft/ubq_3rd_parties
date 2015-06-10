@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_MEPrkPf1Ed-QrtmV3KKWTA" type="EcoreTools" name="ezafdxtopology" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_i9O1gPf1Ed-QrtmV3KKWTA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_i9PckPf1Ed-QrtmV3KKWTA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_i9Pckff1Ed-QrtmV3KKWTA" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_i9Pckvf1Ed-QrtmV3KKWTA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_i9Pck_f1Ed-QrtmV3KKWTA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_i9PclPf1Ed-QrtmV3KKWTA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_i9QDoPf1Ed-QrtmV3KKWTA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_i9QDoff1Ed-QrtmV3KKWTA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_i9QDovf1Ed-QrtmV3KKWTA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_i9QDo_f1Ed-QrtmV3KKWTA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_i9O1gff1Ed-QrtmV3KKWTA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ezafdxtopology.ecore#//AFDXTopology"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_i9O1gvf1Ed-QrtmV3KKWTA" x="233" y="70"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_rYCeoPf1Ed-QrtmV3KKWTA" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rYXOwPf1Ed-QrtmV3KKWTA" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rYXOwff1Ed-QrtmV3KKWTA" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_rYGwEPf1Ed-QrtmV3KKWTA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_rYGwEff1Ed-QrtmV3KKWTA" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_rYGwEvf1Ed-QrtmV3KKWTA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rYGwE_f1Ed-QrtmV3KKWTA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rYGwFPf1Ed-QrtmV3KKWTA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_rYHXIPf1Ed-QrtmV3KKWTA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_rYHXIff1Ed-QrtmV3KKWTA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rYHXIvf1Ed-QrtmV3KKWTA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rYHXI_f1Ed-QrtmV3KKWTA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_rYCeoff1Ed-QrtmV3KKWTA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ezafdx.ecore#//AFDXVirtualLink"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rYCeovf1Ed-QrtmV3KKWTA" x="204" y="240"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_MEPrkff1Ed-QrtmV3KKWTA"/>
+  <element xmi:type="ecore:EPackage" href="ezafdxtopology.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_sjeXAPf1Ed-QrtmV3KKWTA" type="3002" source="_i9O1gPf1Ed-QrtmV3KKWTA" target="_rYCeoPf1Ed-QrtmV3KKWTA">
+    <children xmi:type="notation:Node" xmi:id="_sje-Evf1Ed-QrtmV3KKWTA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sje-E_f1Ed-QrtmV3KKWTA" x="-27" y="34"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_sje-FPf1Ed-QrtmV3KKWTA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sje-Fff1Ed-QrtmV3KKWTA" x="1" y="-19"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_sjeXAff1Ed-QrtmV3KKWTA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_sje-EPf1Ed-QrtmV3KKWTA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ezafdxtopology.ecore#//AFDXTopology/virtualLinks"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sje-Eff1Ed-QrtmV3KKWTA" points="[-17, 20, 135, -162]$[-150, 158, 2, -24]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sjiBYPf1Ed-QrtmV3KKWTA" id="(0.5703703703703704,0.2)"/>
+  </edges>
+</notation:Diagram>

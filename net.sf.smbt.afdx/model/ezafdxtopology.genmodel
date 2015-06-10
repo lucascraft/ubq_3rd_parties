@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.afdx/src-model"
+    editorDirectory="" modelPluginID="net.sf.smbt.afdx" modelName="Ezafdxtopology"
+    rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
+    reflectiveDelegation="true" testsDirectory="" importerID="org.eclipse.emf.importer.cdo"
+    featureDelegation="Reflective" complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../net.sf.xqz.engine/model/temporal.genmodel#//cmd">
+  <foreignModel>ezafdxtopology.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
+  <genPackages prefix="Ezafdxtopology" basePackage="net.sf.smbt" disposableProviderFactory="true"
+      ecorePackage="ezafdxtopology.ecore#/">
+    <genClasses ecoreClass="ezafdxtopology.ecore#//AFDXTopology">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezafdxtopology.ecore#//AFDXTopology/virtualLinks"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Ezafdx" basePackage="net.sf.smbt" disposableProviderFactory="true"
+      ecorePackage="ezafdx.ecore#/">
+    <genClasses ecoreClass="ezafdx.ecore#//AFDXFrame">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXFrame/preamble"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXFrame/sfd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXFrame/macDest"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXFrame/macSrc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXFrame/typeIPv4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXFrame/ipHeader"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXFrame/udpHeader"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXFrame/payload"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXFrame/padding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXFrame/sn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXFrame/fcn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXFrame/ifg"/>
+    </genClasses>
+    <genClasses ecoreClass="ezafdx.ecore#//AFDXPayload">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXPayload/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXPayload/padding"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezafdx.ecore#//AFDXPayload/vl"/>
+    </genClasses>
+    <genClasses ecoreClass="ezafdx.ecore#//AFDXBundle">
+      <genOperations ecoreOperation="ezafdx.ecore#//AFDXBundle/getData"/>
+    </genClasses>
+    <genClasses ecoreClass="ezafdx.ecore#//AFDXVirtualLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXVirtualLink/udpSrcPort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXVirtualLink/ipSrc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXVirtualLink/virtLnkID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXVirtualLink/ipDst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezafdx.ecore#//AFDXVirtualLink/udpDestPort"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
