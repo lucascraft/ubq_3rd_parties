@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Created-By: Lucas Bigeardel (http://www.ubiquisense.com)
-Main-Class: com.ubiquisense.ubibot.MtGoxJettyBotServer
-Sealed: false
-Class-Path: libs/, plugins/
-
- 
