@@ -1,0 +1,153 @@
+
+<smurf>
+  <settings>
+      <OscSendAddress>localhost</OscSendAddress>
+      <OscSendPort>4444</OscSendPort>
+      <OscReceivePort>4445</OscReceivePort>
+      <TuioPort>3333</TuioPort> <!-- Should be 3333 w/ normal Tuio/reactivision setup -->	
+  </settings>
+
+  <fid> 
+	  <id>0</id>
+	  <style>DISC</style>
+	  <kind>SIN_OSC</kind>
+	  <BG>Red</BG>
+	  <FG>Red</FG>
+	  <radius>75</radius>
+	  <proxima>170</proxima>
+	  <proximaVisible>VISIBLE</proximaVisible>
+	  <function>KNOB</function>
+	  <range>75</range>
+  </fid>
+
+  <fid> 
+	  <id>1</id>
+	  <style>DISC</style>
+	  <kind>SQR_OSC</kind>
+	  <BG>Green</BG>
+	  <FG>Green</FG>
+	  <radius>75</radius>
+	  <proxima>170</proxima>
+	  <proximaVisible>VISIBLE</proximaVisible>
+	  <function>KNOB</function>
+	  <range>75</range>
+  </fid>
+
+  <fid> 
+	  <id>2</id>
+	  <style>DISC</style>
+	  <kind>TRI_OSC</kind>
+	  <BG>Yellow</BG>
+	  <FG>Yellow</FG>
+	  <radius>75</radius>
+	  <proxima>170</proxima>
+	  <proximaVisible>VISIBLE</proximaVisible>
+	  <function>KNOB</function>
+	  <range>75</range>
+  </fid>
+
+  <fid> 
+	  <id>3</id>
+	  <style>DISC</style>
+	  <kind>SAW_OSC</kind>
+	  <BG>Orchid</BG>
+	  <FG>Orchid</FG>
+	  <radius>75</radius>
+	  <proxima>170</proxima>
+	  <proximaVisible>VISIBLE</proximaVisible>
+	  <function>KNOB</function>
+	  <range>75</range>
+  </fid>
+
+  <fid> 
+	  <id>4</id>
+	  <style>DISC</style>
+	  <kind>SIN_OSC</kind>
+	  <BG>Orange</BG>
+	  <FG>Orange</FG>
+	  <radius>75</radius>
+	  <proxima>170</proxima>
+	  <proximaVisible>VISIBLE</proximaVisible>
+	  <function>KNOB</function>
+	  <range>75</range>
+  </fid>
+
+  <fid> 
+	  <id>5</id>
+	  <style>DISC</style>
+	  <kind>SIN_OSC</kind>
+	  <BG>Cyan</BG>
+	  <FG>Cyan</FG>
+	  <radius>75</radius>
+	  <proxima>170</proxima>
+	  <proximaVisible>VISIBLE</proximaVisible>
+	  <function>KNOB</function>
+	  <range>75</range>
+  </fid>
+
+  <fid> 
+	  <id>6</id>
+	  <style>DISC</style>
+	  <kind>ECHO</kind>
+	  <BG>Salmon</BG>
+	  <FG>Salmon</FG>
+	  <radius>75</radius>
+	  <proxima>170</proxima>
+	  <proximaVisible>VISIBLE</proximaVisible>
+	  <function>KNOB</function>
+	  <range>75</range>
+  </fid>
+
+  <fid> 
+	  <id>7</id>
+	  <style>DISC</style>
+	  <kind>REVERB</kind>
+	  <BG>Pink</BG>
+	  <FG>Pink</FG>
+	  <radius>75</radius>
+	  <proxima>170</proxima>
+	  <proximaVisible>VISIBLE</proximaVisible>
+	  <function>KNOB</function>
+	  <range>75</range>
+  </fid>
+
+  <fid> 
+	  <id>8</id>
+	  <style>DISC</style>
+	  <kind>SAMPLER</kind>
+	  <BG>Scarlet</BG>
+	  <FG>Scarlet</FG>
+	  <radius>75</radius>
+	  <proxima>170</proxima>
+	  <proximaVisible>VISIBLE</proximaVisible>
+	  <function>KNOB</function>
+	  <range>75</range>
+  </fid>
+
+  <fid> 
+	  <id>9</id>
+	  <style>DISC</style>
+	  <kind>SAMPLER</kind>
+	  <BG>Turquoise</BG>
+	  <FG>Turquoise</FG>
+	  <radius>75</radius>
+	  <proxima>170</proxima>
+	  <proximaVisible>VISIBLE</proximaVisible>
+	  <function>KNOB</function>
+	  <range>75</range>
+  </fid>
+
+  <fid> 
+	  <id>10</id>
+	  <style>DISC</style>
+	  <kind>SAMPLER</kind>
+	  <BG>Light Steel Blue</BG>
+	  <FG>Light Steel Blue</FG>
+	  <radius>75</radius>
+	  <proxima>170</proxima>
+	  <proximaVisible>VISIBLE</proximaVisible>
+	  <function>KNOB</function>
+	  <range>75</range>
+  </fid>
+
+</smurf>

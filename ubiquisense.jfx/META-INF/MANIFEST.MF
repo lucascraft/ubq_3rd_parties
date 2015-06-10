@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Main-Class: ubiquisense.app.UbiquisenseFX
+Class-Path: rt/lib/jfxrt.jar,\
+ rt/lib,\
+ rt/lib/fxplugins.dylib,\
+ rt/lib/libdecora-sse.dylib,\
+ rt/lib/libglass.dylib,\
+ rt/lib/libglib-2.0.0.dylib,\
+ rt/lib/libgstplugins-lite.dylib,\
+ rt/lib/libgstreamer-lite.dylib,\
+ rt/lib/libjavafx-font.dylib,\
+ rt/lib/libjavafx-iio.dylib,\
+ rt/lib/libjfxmedia.dylib,\
+ rt/lib/libjfxwebkit.dylib,\
+ rt/lib/libprism-es2.dylib,\
+ rt/lib/libprism-es2n.dylib,\
+ rt/lib/libprism-sw.dylib,\
+ lib/javaosc.jar
+ 
