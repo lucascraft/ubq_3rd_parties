@@ -1,0 +1,15 @@
+import "fmurf.orchestror"; 
+			listener listenerOsc0 : "net.sf.smbt.osc.cmdEventHandler";
+			listener listenerOsc1 : "net.sf.smbt.osc.cmdEventHandler";
+			listener listenerTuio0 : "net.sf.smbt.osc.cmdEventHandler";
+			decoder decoderOsc0 : "net.sf.smbt.osc.frameInterpreter";
+			decoder decoderOsc1 : "net.sf.smbt.osc.frameInterpreter";
+			decoder decoderTuio0 : "net.sf.smbt.osc.tuio11.frameInterpreter";
+			port oscUdp0 : as UDP accept 4445; // FMURF OSC output 
+			port oscUdp1 : "localhost:4444" as UDP accept 5006; // FMURF OSC input
+			port oscTuio0 : as UDP accept 3333; // Tuio Ubqt Input
+			scope orchestror1 {
+				bind engineOsc0 <= decoderOsc0 to oscUdp0 with listenerOsc0;
+				bind engineOsc1 <= decoderOsc1 to oscUdp1 with listenerOsc1;
+				bind engineTuio0 <= decoderTuio0 to oscTuio0 with listenerTuio0;
+			};

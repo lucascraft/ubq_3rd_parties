@@ -1,0 +1,10 @@
+orchestror orchestror1 {
+		engine engineTuio0;
+		engine engineOsc0;
+		engine engineOsc1;
+		client client1 { engineOsc0 engineOsc1 engineTuio0 };
+			timeline timeline1 : engineOsc0;
+			timeline timeline2 : engineOsc1;
+			timeline timeline3 : engineTuio0;
+			application application1 { client1 };
+		}
