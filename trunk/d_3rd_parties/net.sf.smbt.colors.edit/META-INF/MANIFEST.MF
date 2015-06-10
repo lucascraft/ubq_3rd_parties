@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: net.sf.smbt.colors.edit;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: net.sf.smbt.model.colors.provider.ColorsEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: net.sf.smbt.model.colors.provider
+Require-Bundle: org.eclipse.core.runtime,
+ net.sf.smbt.colors;bundle-version="0.5.0";visibility:=reexport,
+ org.eclipse.emf.edit;bundle-version="2.8.0";visibility:=reexport
+Bundle-ActivationPolicy: lazy

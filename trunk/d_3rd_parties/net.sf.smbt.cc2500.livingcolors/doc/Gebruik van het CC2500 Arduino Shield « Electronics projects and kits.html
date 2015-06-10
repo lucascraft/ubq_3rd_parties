@@ -1,0 +1,826 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="cufon-active cufon-ready" dir="ltr" 
+xmlns="http://www.w3.org/1999/xhtml" lang="nl-NL"><head>
+
+
+
+
+<title>Gebruik van het CC2500 Arduino Shield « Electronics projects and 
+kits</title>
+
+<link rel="stylesheet" 
+href="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/language-selector.css"
+ type="text/css" media="all">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" 
+href="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/style.css"
+ type="text/css">
+<link rel="stylesheet" 
+href="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/wider.css"
+ type="text/css">
+<link rel="shortcut icon" 
+href="http://www.knutsel.org/?lang=nl/favicon.ico">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" 
+href="http://www.knutsel.org/feed/?lang=nl">
+<link rel="alternate" type="text/xml" title="RSS .92" 
+href="http://www.knutsel.org/feed/rss/?lang=nl">
+<link rel="alternate" type="application/atom+xml" title="Atom 1.0" 
+href="http://www.knutsel.org/feed/atom/?lang=nl">
+<link rel="pingback" href="http://www.knutsel.org/xmlrpc.php">
+<link rel="alternate" type="application/rss+xml" title="Electronics 
+projects and kits » Gebruik van het CC2500 Arduino Shield Comments Feed"
+ 
+href="http://www.knutsel.org/2009/02/01/gebruik-van-het-cc2500-arduino-shield/feed/?lang=nl">
+<link rel="stylesheet" type="text/css" 
+href="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/imgnotes.css"><link
+ rel="stylesheet" id="colorbox-theme1-css" 
+href="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/colorbox.css"
+ type="text/css" media="screen">
+<link rel="stylesheet" id="codecolorer-css" 
+href="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/codecolorer.css"
+ type="text/css" media="screen">
+<script type="text/javascript" src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/jquery_002.js"></script>
+<script type="text/javascript" src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/jquery_003.js"></script>
+<script type="text/javascript" src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/jquery-colorbox-auto-min.js"></script>
+<script type="text/javascript" src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/jquery.js"></script>
+<script type="text/javascript" src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/knspr-imageNote.js"></script>
+<script type="text/javascript" src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" 
+href="http://www.knutsel.org/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" 
+href="http://www.knutsel.org/wp-includes/wlwmanifest.xml"> 
+<link rel="index" title="Electronics projects and kits" 
+href="http://www.knutsel.org/?lang=nl/">
+<link rel="start" title="New version of the Arduino CC2500 shield." 
+href="http://www.knutsel.org/2010/01/08/hello-world/">
+<link rel="prev" title="LivingColors 1ste generatie" 
+href="http://www.knutsel.org/2009/01/01/livingcolors-1ste-generatie/?lang=nl">
+<link rel="next" title="Assembleren van het CC2500 Arduino Shield" 
+href="http://www.knutsel.org/2009/02/01/assembleren-van-het-cc2500-arduino-shield/?lang=nl">
+<link rel="canonical" 
+href="http://www.knutsel.org/2009/02/01/gebruik-van-het-cc2500-arduino-shield/?lang=nl">
+<link rel="shortlink" href="http://www.knutsel.org/?p=252">
+<script type="text/javascript">var icl_lang = 'nl';var icl_home = 'http://www.knutsel.org?lang=nl';</script>
+<script type="text/javascript" src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/sitepress.js"></script>
+<meta name="generator" content="WPML ver:1.8.2.1 stt:39,1;0;0;0">
+
+<link rel="stylesheet" 
+href="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/wp-syntax.css"
+ type="text/css" media="screen">
+<style type="text/css">/*<![CDATA[*/* html #searchform{margin-top:-13px;}*+ html #searchform{margin-top:-13px;}  #content-body,x:-moz-any-link{float:left;margin-right:28px;}#content-body, x:-moz-any-link, x:default{float:none;margin-right:25px;} /*]]>*/</style>
+<script src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/cufon-yui.js" type="text/javascript"></script><style type="text/css">cufon{text-indent:0!important;}@media screen,projection{cufon{display:inline!important;display:inline-block!important;position:relative!important;vertical-align:middle!important;font-size:1px!important;line-height:1px!important;}cufon cufontext{display:-moz-inline-box!important;display:inline-block!important;width:0!important;height:0!important;overflow:hidden!important;text-indent:-10000in!important;}cufon canvas{position:relative!important;}}@media print{cufon{padding:0!important;}cufon canvas{display:none!important;}}</style>
+<script src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/vera.js" type="text/javascript"></script><script type="text/javascript">/*<![CDATA[*/Cufon.replace(['h1','h2'], { fontFamily: 'Vera' });/*]]>*/</script>
+<!--[if IE 6]><style type="text/css">/*<![CDATA[*/#header{background-image: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.knutsel.org/wp-content/themes/lightword/images/wider/content_top.png',sizingMethod='scale'); }#footer{background:transparent url(http://www.knutsel.org/wp-content/themes/lightword/images/wider/content_bottom.gif) no-repeat;height:8px;}.comm_date{background-image: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.knutsel.org/wp-content/themes/lightword/images/date_comm_box.png',sizingMethod='scale'); }/*]]>*/</style><![endif]-->
+        <!-- jQuery Colorbox 3.6 | by Arne Franken, http://www.techotronic.de/ -->
+        <!--[if IE]>
+<style type="text/css">
+.cboxIE #cboxTopLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://www.knutsel.org/wp-content/plugins/jquery-colorbox/themes/theme1/images/internet_explorer/borderTopLeft.png, sizingMethod='scale');}
+.cboxIE #cboxTopCenter{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://www.knutsel.org/wp-content/plugins/jquery-colorbox/themes/theme1/images/internet_explorer/borderTopCenter.png, sizingMethod='scale');}
+.cboxIE #cboxTopRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://www.knutsel.org/wp-content/plugins/jquery-colorbox/themes/theme1/images/internet_explorer/borderTopRight.png, sizingMethod='scale');}
+.cboxIE #cboxBottomLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://www.knutsel.org/wp-content/plugins/jquery-colorbox/themes/theme1/images/internet_explorer/borderBottomLeft.png, sizingMethod='scale');}
+.cboxIE #cboxBottomCenter{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://www.knutsel.org/wp-content/plugins/jquery-colorbox/themes/theme1/images/internet_explorer/borderBottomCenter.png, sizingMethod='scale');}
+.cboxIE #cboxBottomRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://www.knutsel.org/wp-content/plugins/jquery-colorbox/themes/theme1/images/internet_explorer/borderBottomRight.png, sizingMethod='scale');}
+.cboxIE #cboxMiddleLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://www.knutsel.org/wp-content/plugins/jquery-colorbox/themes/theme1/images/internet_explorer/borderMiddleLeft.png, sizingMethod='scale');}
+.cboxIE #cboxMiddleRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://www.knutsel.org/wp-content/plugins/jquery-colorbox/themes/theme1/images/internet_explorer/borderMiddleRight.png, sizingMethod='scale');}
+</style>
+<![endif]--><script type="text/javascript">
+    // <![CDATA[
+    jQuery(document).ready(function($) {
+            $("a:has(img):not(.colorbox-off)").each(function(index, obj) {
+                    if ($(obj).attr("href").match(/\.(?:jpe?g|gif|png|bmp)/i)) {
+                            var $nestedElement = $(obj).children(0);
+                if ($nestedElement.is("img")) {
+                    var $nestedElementClassAttribute = $nestedElement.attr("class");
+                                    var $groupId = $nestedElementClassAttribute.match('colorbox-[0-9]+') || $nestedElementClassAttribute.match('colorbox-manual');
+                                    if ($groupId && !$nestedElementClassAttribute.match('colorbox-off')) {
+                                            $groupId = $groupId.toString();
+                                            if ($groupId == "colorbox-manual") {
+                            $groupId = "nofollow";
+                        }
+                                            $(obj).colorbox({
+                            rel:$groupId,
+                            title:$nestedElement.attr("title"),
+                            slideshowAuto:false,scalePhotos:false,preloading:false,                            opacity:"0.85",
+                            transition:"elastic",
+                            speed:350,
+                            slideshowSpeed:2500,
+                            close:"sluiten",
+                            next:"volgende",
+                            previous:"vorige",
+                            slideshowStart:"start slideshow",
+                            slideshowStop:"stop slideshow",
+                            current:"{current} / {total}"
+                        });
+                    }
+                }
+            }
+        });
+    });
+    // ]]>
+</script>        <!-- jQuery Colorbox 3.6 | by Arne Franken, http://www.techotronic.de/ -->
+        		<style type="text/css">
+		.better-tag-cloud-shortcode li,
+		.better-tag-cloud-shortcode li a,
+		li#better-tag-cloud ul.wp-tag-cloud li,
+		li#better-tag-cloud ul.wp-tag-cloud li a {
+			display:	inline;
+					}
+		</style> <style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style>
+
+</head><body><div style="display: none;" id="cboxOverlay"></div><div 
+style="padding-bottom: 42px; padding-right: 42px; display: none;" 
+class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: 
+left;" id="cboxTopLeft"></div><div style="float: left;" 
+id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div><div
+ style="float: left;" id="cboxMiddleLeft"></div><div style="float: 
+left;" id="cboxContent"><div class="" id="cboxLoadedContent" 
+style="width: 0pt; height: 0pt;"></div><div class="" 
+id="cboxLoadingOverlay"></div><div class="" id="cboxLoadingGraphic"></div><div
+ class="" id="cboxTitle"></div><div class="" id="cboxCurrent"></div><div
+ class="" id="cboxNext"></div><div class="" id="cboxPrevious"></div><div
+ class="" id="cboxSlideshow"></div><div class="" id="cboxClose"></div></div><div
+ style="float: left;" id="cboxMiddleRight"></div></div><div><div 
+style="float: left;" id="cboxBottomLeft"></div><div style="float: left;"
+ id="cboxBottomCenter"></div><div style="float: left;" 
+id="cboxBottomRight"></div></div></div><div style="position: absolute; 
+width: 9999px; visibility: hidden; display: none;"></div></div>
+<div id="wrapper">
+<div id="top_cufon"><h1 id="logo"><a name="top" title="Electronics 
+projects and kits" href="http://www.knutsel.org/?lang=nl"><cufon 
+style="width: 296px; height: 36px;" alt="Electronics " class="cufon 
+cufon-canvas"><canvas style="width: 326px; height: 38px; top: -1px; 
+left: -2px;" height="38" width="326"></canvas><cufontext>Electronics </cufontext></cufon><cufon
+ style="width: 216px; height: 36px;" alt="projects " class="cufon 
+cufon-canvas"><canvas style="width: 246px; height: 38px; top: -1px; 
+left: -2px;" height="38" width="246"></canvas><cufontext>projects </cufontext></cufon><cufon
+ style="width: 103px; height: 36px;" alt="and " class="cufon 
+cufon-canvas"><canvas style="width: 133px; height: 38px; top: -1px; 
+left: -2px;" height="38" width="133"></canvas><cufontext>and </cufontext></cufon><cufon
+ style="width: 94px; height: 36px;" alt="kits" class="cufon 
+cufon-canvas"><canvas style="width: 110px; height: 38px; top: -1px; 
+left: -2px;" height="38" width="110"></canvas><cufontext>kits</cufontext></cufon></a><cufon
+ style="width: 13px; height: 36px;" alt=" " class="cufon cufon-canvas"><canvas
+ style="width: 43px; height: 38px; top: -1px; left: -2px;" height="38" 
+width="43"></canvas><cufontext> </cufontext></cufon><small><cufon 
+style="width: 50px; height: 12px;" alt="Stuff " class="cufon 
+cufon-canvas"><canvas style="width: 60px; height: 13px; top: 0px; left: 
+-1px;" height="13" width="60"></canvas><cufontext>Stuff </cufontext></cufon><cufon
+ style="width: 9px; height: 12px;" alt="I " class="cufon cufon-canvas"><canvas
+ style="width: 20px; height: 13px; top: 0px; left: -1px;" height="13" 
+width="20"></canvas><cufontext>I </cufontext></cufon><cufon 
+style="width: 58px; height: 12px;" alt="design " class="cufon 
+cufon-canvas"><canvas style="width: 68px; height: 13px; top: 0px; left: 
+-1px;" height="13" width="68"></canvas><cufontext>design </cufontext></cufon><cufon
+ style="width: 35px; height: 12px;" alt="and " class="cufon 
+cufon-canvas"><canvas style="width: 45px; height: 13px; top: 0px; left: 
+-1px;" height="13" width="45"></canvas><cufontext>and </cufontext></cufon><cufon
+ style="width: 48px; height: 12px;" alt="build " class="cufon 
+cufon-canvas"><canvas style="width: 58px; height: 13px; top: 0px; left: 
+-1px;" height="13" width="58"></canvas><cufontext>build </cufontext></cufon><cufon
+ style="width: 35px; height: 12px;" alt="and " class="cufon 
+cufon-canvas"><canvas style="width: 45px; height: 13px; top: 0px; left: 
+-1px;" height="13" width="45"></canvas><cufontext>and </cufontext></cufon><cufon
+ style="width: 40px; height: 12px;" alt="take " class="cufon 
+cufon-canvas"><canvas style="width: 50px; height: 13px; top: 0px; left: 
+-1px;" height="13" width="50"></canvas><cufontext>take </cufontext></cufon><cufon
+ style="width: 46px; height: 12px;" alt="apart" class="cufon 
+cufon-canvas"><canvas style="width: 52px; height: 13px; top: 0px; left: 
+-1px;" height="13" width="52"></canvas><cufontext>apart</cufontext></cufon></small></h1></div>
+<div id="header">
+<a id="rss-feed" title="Syndicate deze site met RSS" 
+href="http://www.knutsel.org/feed/?lang=nl">Abonneer via RSS</a>
+
+<div id="top_bar">
+<div class="center_menu">
+<ul style="z-index: 50;" id="front_menu">
+<li><a class="" title="Home" href="http://www.knutsel.org/?lang=nl"><span>Home</span></a></li>
+</ul>
+</div>
+<form method="get" id="searchform" 
+action="http://www.knutsel.org?lang=nl"> <input name="s" id="s" 
+type="text"> <input id="go" value="" alt="Search" title="Search" 
+type="submit"><input value="nl" name="lang" type="hidden"></form>
+</div>
+
+</div>
+<div id="content"><div id="content-body">
+<div class="post-252 post type-post hentry category-arduino-shields 
+category-kits-nl category-livingcolors-nl-2 tag-arduino-nl 
+tag-arduino-shield-nl tag-cc2500-nl tag-livingcolors-nl 
+tag-processing-nl" id="post-252">
+<div class="comm_date"><span class="data"><span class="j">1</span>Feb/09</span><span
+ class="nr_comm"><a class="nr_comm_spot" 
+href="http://www.knutsel.org/2009/02/01/gebruik-van-het-cc2500-arduino-shield/?lang=nl#comments">0</a></span></div>
+<h2><a title="Gebruik van het CC2500 Arduino Shield" 
+href="http://www.knutsel.org/2009/02/01/gebruik-van-het-cc2500-arduino-shield/?lang=nl"
+ rel="bookmark"><cufon style="width: 107px; height: 24px;" alt="Gebruik "
+ class="cufon cufon-canvas"><canvas style="width: 129px; height: 25px; 
+top: -1px; left: -1px;" height="25" width="129"></canvas><cufontext>Gebruik
+ </cufontext></cufon><cufon style="width: 54px; height: 24px;" alt="van "
+ class="cufon cufon-canvas"><canvas style="width: 75px; height: 25px; 
+top: -1px; left: -1px;" height="25" width="75"></canvas><cufontext>van </cufontext></cufon><cufon
+ style="width: 50px; height: 24px;" alt="het " class="cufon 
+cufon-canvas"><canvas style="width: 71px; height: 25px; top: -1px; left:
+ -1px;" height="25" width="71"></canvas><cufontext>het </cufontext></cufon><cufon
+ style="width: 104px; height: 24px;" alt="CC2500 " class="cufon 
+cufon-canvas"><canvas style="width: 125px; height: 25px; top: -1px; 
+left: -1px;" height="25" width="125"></canvas><cufontext>CC2500 </cufontext></cufon><cufon
+ style="width: 108px; height: 24px;" alt="Arduino " class="cufon 
+cufon-canvas"><canvas style="width: 129px; height: 25px; top: -1px; 
+left: -1px;" height="25" width="129"></canvas><cufontext>Arduino </cufontext></cufon><cufon
+ style="width: 79px; height: 24px;" alt="Shield" class="cufon 
+cufon-canvas"><canvas style="width: 91px; height: 25px; top: -1px; left:
+ -1px;" height="25" width="91"></canvas><cufontext>Shield</cufontext></cufon></a></h2>
+<h3>Software : de Arduino Library</h3>
+<p>De software bestaat uit een library voor de Arduino voor het bedienen
+ van een Philips Livingcolors. Hier zit in het verzenden en ontvangen 
+van berichten in en het kan gebruikt worden als basis om tussen twee 
+shields te communiceren.</p>
+<p>De library staat<a 
+onclick="javascript:pageTracker._trackPageview('/outgoing/static.knutsel.org/kits/CC2500_Arduino_Shield_v03/documents/LivingColors.zip');"
+ 
+href="http://static.knutsel.org/kits/CC2500_Arduino_Shield_v03/documents/LivingColors.zip"></a>
+ <a 
+onclick="javascript:pageTracker._trackPageview('/downloads/wp-content/uploads/2010/01/a_LiCo_Control.zip');"
+ 
+href="http://www.knutsel.org/wp-content/uploads/2010/01/a_LiCo_Control.zip">hier</a>
+ en moet uitgepakt in de "hardware/libraries" van de Arduino omgeving. 
+Je moet dus een "hardware\libraries\LivingColors" directory hebben met 
+daarin :</p>
+<ul style="z-index: 40;">
+<li>CC2500.cpp</li>
+<li>CC2500.h</li>
+<li>ColourConversion.cpp</li>
+<li>ColourConversion.h</li>
+<li>keywords.txt</li>
+<li>LivingColors.cpp</li>
+<li>LivingColors.h</li>
+</ul>
+<p>De library is <a 
+onclick="javascript:pageTracker._trackPageview('/downloads/wp-content/uploads/2010/01/LivingColors.zip');"
+ 
+href="http://www.knutsel.org/wp-content/uploads/2010/01/LivingColors.zip">hier</a>
+ en in de bestanden zelf <a 
+href="http://www.knutsel.org/static/livingcolorslib/html/">uitgebreid 
+gedocumenteerd</a>.</p>
+<p>De broncode heeft een GPL licentie. Als je deze code of een product 
+gebaseerd op deze code verspreidt moet dat dus ook met dezelfde 
+licentie. De code is gebaseerd op code van Jeroen Domburg, bekend van <a
+ 
+onclick="javascript:pageTracker._trackPageview('/outgoing/gathering.tweakers.net/forum/list_topics/82');"
+ href="http://gathering.tweakers.net/forum/list_topics/82">Tweakers</a> 
+en diverse hacks, en beschreven in <a 
+onclick="javascript:pageTracker._trackPageview('/outgoing/www.elektor.nl/artikelen-als-pdf/2008/mei/kleurig-computerlicht.429788.lynkx');"
+ 
+href="http://www.elektor.nl/artikelen-als-pdf/2008/mei/kleurig-computerlicht.429788.lynkx">een
+ artikel van Elektuur in de Mei 2008 editie</a>. George Mathijssen heeft
+ de code opgeschoond en aan de praat gekregen als Arduino library.</p>
+<p>De library heeft vast bugs. Zo lijkt de RGB naar HSI conversie niet 
+helemaal te kloppen en negeren we de ACK of NACK van de Livingcolors. 
+Fixes, aanpassingen en verbeteringen zijn welkom !</p>
+<h3>LiCo_Control : een voorbeeld Arduino applicatie.</h3>
+<p>Om de library te testen de Livincolors te bedienen heb ik een Arduino
+ applicatie gemaakt die je commando's kan geven via de seriele poort 
+over USB. Je kan hem dan bedienen met Putty of Hyperterminal of iets 
+dergelijks.</p>
+<p>Als LiCo klaar is om commando's stuurt hij een "!". Is een commando 
+niet begrepen dan stuurt hij een "?".</p>
+<p>De commando's zijn :</p>
+<table>
+<tbody>
+<tr>
+<th>Commando</th>
+<th>Functie</th>
+</tr>
+<tr>
+<td><strong>r</strong></td>
+<td>reset</td>
+</tr>
+<tr>
+<td><strong>w</strong><em>n-rrr-ggg-bbb</em></td>
+<td><em>r</em>, <em>g</em> and <em>b</em> are numbers 000 to 255. 
+Example "w000-255-000\" for bright green. <em>n</em> is the lamp number.</td>
+</tr>
+<tr>
+<td><strong>h</strong><em>n-hhh-sss-iii</em></td>
+<td><em>h</em>, <em>s</em> and <em>i</em> are numbers 000 to 255. No 
+example for now. <em>n</em> is the lamp number.</td>
+</tr>
+<tr>
+<td><strong>i</strong></td>
+<td>print info</td>
+</tr>
+<tr>
+<td><strong>n</strong><em>n</em></td>
+<td>turn lamp number<em> n</em> on</td>
+</tr>
+<tr>
+<td><strong>f</strong><em>n</em></td>
+<td>turn lamp number<em> n</em>off</td>
+</tr>
+<tr>
+<td><strong>e</strong><em>e</em></td>
+<td><em>e</em> = 0 echo off, <em>e</em> = 1 echo on.</td>
+</tr>
+<tr>
+<td><strong>l</strong></td>
+<td>listen for adresses. Use i to list adresses.</td>
+</tr>
+<tr>
+<td><strong>s</strong><em>aabbccddeeffgghhii</em></td>
+<td>store adress in a..i. 9 numbers as 2 digit hex</td>
+</tr>
+<tr>
+<td><strong>?</strong></td>
+<td>dummy command.</td>
+</tr>
+</tbody>
+</table>
+<p>Hier een voorbeeld van het gebruik van deze Arduino applicatie :<br>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
+codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"
+ height="344" width="425"><param name="allowFullScreen" value="true"><param
+ name="allowScriptAccess" value="always"><param name="src" 
+value="http://www.youtube.com/v/mKMTu3o42Y8&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1"><param
+ name="allowfullscreen" value="true"><embed 
+type="application/x-shockwave-flash" 
+src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/mKMTu3o42Y8color10xb1b1b1color20xcfcfcfhlen_USfeatureplayer_embe"
+ allowscriptaccess="always" allowfullscreen="true" height="344" 
+width="425"></object></p>
+<p>In LiCo-Control bedien je de lamp door :</p>
+<ul style="z-index: 30;">
+<li>De lamp aan te doen met de afstand bediening.</li>
+<li>Een verbinding te openen met een terminal applicatie (putty, 
+hyperterminal.. etc.).</li>
+<li>De code van je lampen te leren met "l"..</li>
+<li>.. en dan de lamp te bedienen met de afstandbediening..</li>
+<li>De Arduino luistert dan naar berichten tussen de afstandbediening en
+ de lamp en leert daar de adressen uit.</li>
+<li>Met "i" kan je dan de geleerde adressen printen.</li>
+<li>Met "w0-255-000-000" kan je lamp 0 dan op fel rood zetten (R=255, 
+G=000 eb B=000).</li>
+<li>Met "w1-000-000-010" kan je lamp 1 dan op een beetje baluw zetten.</li>
+</ul>
+<p>De geleerde adressen kan je hard in de broncode voor LiCo-Control 
+zetten, je hoeft ze dan niet steeds de adressen te leren.</p>
+<h3>WheelColor : een voorbeeld Processing applicatie.</h3>
+<p><a 
+onclick="javascript:pageTracker._trackPageview('/downloads/wp-content/uploads/2010/01/p_WheelColor.zip');"
+ 
+href="http://www.knutsel.org/wp-content/uploads/2010/01/p_WheelColor.zip">WheelColor</a>
+ is een Processing applicatie die commando's kan sturen naar 
+LiCo_Control. Je kan dan de kleur van de LivigColors instellen met een 
+kleurenwiel. De applicatie is simple en lelijk maar er zit een goed 
+voorbeeld in voor het communiceren met LiCo_Control op een robuste 
+manier.</p>
+<p>Hier een voorbeeld van het gebruik van deze Arduino applicatie :</p>
+<p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
+codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"
+ height="344" width="425"><param name="allowFullScreen" value="true"><param
+ name="allowScriptAccess" value="always"><param name="src" 
+value="http://www.youtube.com/v/3JY42cgeLn0&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1"><param
+ name="allowfullscreen" value="true"><embed 
+type="application/x-shockwave-flash" 
+src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/3JY42cgeLn0color10xb1b1b1color20xcfcfcfhlen_USfeatureplayer_embe"
+ allowscriptaccess="always" allowfullscreen="true" height="344" 
+width="425"></object></p>
+<p>In LiCo-Control bedien je de lamp door :</p>
+<ul style="z-index: 20;">
+<li>De lamp aan te doen met de afstand bediening.</li>
+<li>Een verbinding te openen met een terminal applicatie (putty, 
+hyperterminal.. etc.).</li>
+<li>De code van je lampen te leren met "l"..</li>
+<li>.. en dan de lamp te bedienen met de afstandbediening..</li>
+<li>De Arduino luistert dan naar berichten tussen de afstandbediening en
+ de lamp en leert daar de adressen uit.</li>
+<li>Met "i" kan je dan de geleerde adressen printen.</li>
+<li>Met "w0-255-000-000" kan je lamp 0 dan op fel rood zetten (R=255, 
+G=000 eb B=000).</li>
+<li>Met "w1-000-000-010" kan je lamp 1 dan op een beetje baluw zetten.</li>
+</ul>
+<p>De geleerde adressen kan je hard in de broncode voor LiCo-Control 
+zetten, je hoeft ze dan niet steeds de adressen te leren.</p>
+<h3>Relevante bestanden.</h3>
+<p>Het <a 
+onclick="javascript:pageTracker._trackPageview('/downloads/wp-content/uploads/2010/01/arduino_shield_CC2500_x125_SMD_sch.pdf');"
+ 
+href="http://www.knutsel.org/wp-content/uploads/2010/01/arduino_shield_CC2500_x125_SMD_sch.pdf">schema</a>
+ (als pdf).<br>
+De <a 
+onclick="javascript:pageTracker._trackPageview('/downloads/wp-content/uploads/2010/01/arduino_shield_CC2500_x125_SMD_brd.pdf');"
+ 
+href="http://www.knutsel.org/wp-content/uploads/2010/01/arduino_shield_CC2500_x125_SMD_brd.pdf">printlayout</a>
+ (als pdf).<br>
+De <a 
+href="http://www.knutsel.org/wp-content/uploads/2010/01/arduino_shield_CC2500_x125_SMD_parts.txt">stuklijst</a>
+ (als txt).<br>
+De Arduino <a 
+onclick="javascript:pageTracker._trackPageview('/downloads/wp-content/uploads/2010/01/LivingColors.zip');"
+ 
+href="http://www.knutsel.org/wp-content/uploads/2010/01/LivingColors.zip">library</a>
+ (als zip).<br>
+Een Arduino <a 
+onclick="javascript:pageTracker._trackPageview('/downloads/wp-content/uploads/2010/01/a_LiCo_Control.zip');"
+ 
+href="http://www.knutsel.org/wp-content/uploads/2010/01/a_LiCo_Control.zip">voorbeeld</a>
+ (als zip).<br>
+Een <a 
+onclick="javascript:pageTracker._trackPageview('/downloads/wp-content/uploads/2010/01/p_WheelColor.zip');"
+ 
+href="http://www.knutsel.org/wp-content/uploads/2010/01/p_WheelColor.zip">Processing
+ voorbeeld</a> die het Arduino voorbeeld gebruikt (als zip).<br>
+De <a 
+onclick="javascript:pageTracker._trackPageview('/outgoing/www.ti.com/lit/gpn/cc2500');"
+ href="http://www.ti.com/lit/gpn/cc2500">datasheet</a> van de <a 
+onclick="javascript:pageTracker._trackPageview('/outgoing/focus.ti.com/docs/prod/folders/print/cc2500.html');"
+ href="http://focus.ti.com/docs/prod/folders/print/cc2500.html">CC2500 
+chip</a> van <a 
+onclick="javascript:pageTracker._trackPageview('/outgoing/www.ti.com/');"
+ href="http://www.ti.com/">TI</a>. (<a 
+onclick="javascript:pageTracker._trackPageview('/downloads/wp-content/uploads/2010/01/cc2500.pdf');"
+ href="http://www.knutsel.org/wp-content/uploads/2010/01/cc2500.pdf">mirror</a>).
+ Er staan <strong>belangrijke bugs</strong> in de <strong><a 
+onclick="javascript:pageTracker._trackPageview('/outgoing/static.knutsel.org/kits/CC2500_Arduino_Shield_v03/documents/swrz002d.pdf');"
+ 
+href="http://static.knutsel.org/kits/CC2500_Arduino_Shield_v03/documents/swrz002d.pdf">errata</a></strong>
+ op de site van TI !<br>
+De <a 
+onclick="javascript:pageTracker._trackPageview('/outgoing/www.quasaruk.co.uk/acatalog/DSQFM-TRX2-1.pdf');"
+ href="http://www.quasaruk.co.uk/acatalog/DSQFM-TRX2-1.pdf">datasheet</a>
+ van de <a 
+onclick="javascript:pageTracker._trackPageview('/outgoing/www.quasaruk.co.uk/acatalog/FM_Transceiver_Module.html');"
+ href="http://www.quasaruk.co.uk/acatalog/FM_Transceiver_Module.html">CC2500
+ module</a> van Quasar. (<a 
+onclick="javascript:pageTracker._trackPageview('/downloads/wp-content/uploads/2010/01/DSQFM-TRX-2.pdf');"
+ 
+href="http://www.knutsel.org/wp-content/uploads/2010/01/DSQFM-TRX-2.pdf">mirror</a>)<br>
+De <a 
+onclick="javascript:pageTracker._trackPageview('/outgoing/www.ti.com/lit/gpn/sn74lvc125a');"
+ href="http://www.ti.com/lit/gpn/sn74lvc125a">datasheet</a> van de <a 
+onclick="javascript:pageTracker._trackPageview('/outgoing/focus.ti.com/docs/prod/folders/print/sn74lvc125a.html');"
+ href="http://focus.ti.com/docs/prod/folders/print/sn74lvc125a.html">74LVC125</a>.
+ (<a 
+onclick="javascript:pageTracker._trackPageview('/downloads/wp-content/uploads/2010/01/sn74lvc125a.pdf');"
+ 
+href="http://www.knutsel.org/wp-content/uploads/2010/01/sn74lvc125a.pdf">mirror</a>)<br>
+De <a 
+onclick="javascript:pageTracker._trackPageview('/outgoing/www.onsemi.com/pub/Collateral/LP2950-D.PDF');"
+ href="http://www.onsemi.com/pub/Collateral/LP2950-D.PDF">datasheet</a> 
+van de <a 
+onclick="javascript:pageTracker._trackPageview('/outgoing/www.onsemi.com/PowerSolutions/product.do?id=LP2950ACDT-3.3RG');"
+ 
+href="http://www.onsemi.com/PowerSolutions/product.do?id=LP2950ACDT-3.3RG">LP2950</a>
+ spannings regelaar. (<a 
+onclick="javascript:pageTracker._trackPageview('/downloads/wp-content/uploads/2010/01/LP2950-D.pdf');"
+ href="http://www.knutsel.org/wp-content/uploads/2010/01/LP2950-D.pdf">mirror</a>)<br>
+De CC2500 en Atmel op de Arduino gebruiken <a 
+onclick="javascript:pageTracker._trackPageview('/outgoing/en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus');"
+ href="http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">SPI</a>
+ om te communiceren. TI heeft er <a 
+onclick="javascript:pageTracker._trackPageview('/downloads/wp-content/uploads/2010/01/swra112b-.pdf');"
+ href="http://www.knutsel.org/wp-content/uploads/2010/01/swra112b-.pdf">een
+ document</a> over gemaakt.</p>
+
+
+
+<div class="cat_tags clear">
+<span class="category">Geëtiketeerd als: <a 
+href="http://www.knutsel.org/tag/arduino-nl/?lang=nl" rel="tag">Arduino</a>,
+ <a href="http://www.knutsel.org/tag/arduino-shield-nl/?lang=nl" 
+rel="tag">Arduino Shield</a>, <a 
+href="http://www.knutsel.org/tag/cc2500-nl/?lang=nl" rel="tag">CC2500</a>,
+ <a href="http://www.knutsel.org/tag/livingcolors-nl/?lang=nl" rel="tag">Livingcolors</a>,
+ <a href="http://www.knutsel.org/tag/processing-nl/?lang=nl" rel="tag">Processing</a></span>
+<span class="continue"><a class="nr_comm_spot" 
+href="http://www.knutsel.org/2009/02/01/gebruik-van-het-cc2500-arduino-shield/?lang=nl#respond">Laat
+ een reactie achter</a></span><div class="clear"></div>
+</div>
+<div class="cat_tags_close"></div>
+
+</div>
+
+<div id="tabsContainer">
+<a rel="tab-content0" href="#" class="tabs selected"><span>Reacties (0)</span></a>
+<a rel="tab-content1" href="#" class="tabs"><span>Trackbacks (0)</span></a>
+<span class="subscribe_comments"><a 
+href="http://www.knutsel.org/2009/02/01/gebruik-van-het-cc2500-arduino-shield/feed/?lang=nl">(
+ abboneren op reacties op dit bericht )</a></span>
+<div class="clear_tab"></div>
+<div id="tab-content0" class="tab-content selected">
+<a name="comments"></a>
+
+<p class="no">Nog geen reacties</p>
+
+ 
+<br><div id="respond">
+<h2 style="background: none repeat scroll 0% 0% transparent;"><cufon 
+style="width: 55px; height: 24px;" alt="Laat " class="cufon 
+cufon-canvas"><canvas style="width: 75px; height: 25px; top: -1px; left:
+ -1px;" height="25" width="75"></canvas><cufontext>Laat </cufontext></cufon><cufon
+ style="width: 49px; height: 24px;" alt="een " class="cufon 
+cufon-canvas"><canvas style="width: 69px; height: 25px; top: -1px; left:
+ -1px;" height="25" width="69"></canvas><cufontext>een </cufontext></cufon><cufon
+ style="width: 83px; height: 24px;" alt="reactie " class="cufon 
+cufon-canvas"><canvas style="width: 103px; height: 25px; top: -1px; 
+left: -1px;" height="25" width="103"></canvas><cufontext>reactie </cufontext></cufon><cufon
+ style="width: 72px; height: 24px;" alt="achter" class="cufon 
+cufon-canvas"><canvas style="width: 90px; height: 25px; top: -1px; left:
+ -1px;" height="25" width="90"></canvas><cufontext>achter</cufontext></cufon></h2>
+
+
+<form action="http://www.knutsel.org/wp-comments-post.php" method="post"
+ id="commentform">
+
+
+<p><textarea name="comment" id="comment" rows="10" tabindex="1"></textarea></p>
+<p><input name="author" id="author" size="22" tabindex="1" type="text">
+<label for="author"><small>Naam (verplicht)</small></label></p>
+
+<p><input name="email" id="email" size="22" tabindex="2" type="text">
+<label for="email"><small>Mail (wordt niet gepubliceerd) (verplicht)</small></label></p>
+
+<p><input name="url" id="url" size="22" tabindex="3" type="text">
+<label for="url"><small>Website</small></label></p>
+
+
+<p><input name="submit" id="submit" tabindex="4" accesskey="s" 
+value="Inzenden" type="submit"><a rel="nofollow" 
+id="cancel-comment-reply-link" 
+href="http://www.knutsel.org/2009/02/01/gebruik-van-het-cc2500-arduino-shield/?lang=nl#respond"
+ style="display: none;">( Annuleren)</a><br class="clear"></p>
+<input name="comment_post_ID" value="252" id="comment_post_ID" 
+type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+        
+        <input name="icl_comment_language" value="nl" type="hidden">
+        
+          
+        </form>
+</div>
+</div>
+
+<div id="tab-content1" class="tab-content">
+<p class="no">Nog geen trackbacks.</p></div>
+</div>
+<div class="next_previous_links">
+<span class="alignleft"><a 
+href="http://www.knutsel.org/2009/02/01/assembleren-van-het-cc2500-arduino-shield/?lang=nl"
+ rel="next">Assembleren van het CC2500 Arduino Shield</a> »</span>
+<span class="alignright">« <a 
+href="http://www.knutsel.org/2009/01/01/livingcolors-1ste-generatie/?lang=nl"
+ rel="prev">LivingColors 1ste generatie</a></span>
+<div class="clear"></div>
+
+</div>
+</div>
+<div class="content-sidebar">
+<div id="lang_sel">
+    <ul style="z-index: 10;">
+        <li><a href="#" class="lang_sel_sel icl-nl">
+            </a>                                    
+            <ul style="z-index: 0;">
+                                <li class="icl-en">          
+                    <a 
+href="http://www.knutsel.org/2009/02/01/gebruik-van-het-cc2500-arduino-shield/?lang=nl">
+                                        <span 
+class="icl_lang_sel_native">English</span> <span 
+class="icl_lang_sel_translated"><span class="icl_lang_sel_native">(</span>Engels<span
+ class="icl_lang_sel_native">)</span></span>                    </a>
+                </li>
+                            </ul>            
+             
+                    </li>
+    </ul>    
+</div>
+<h3>Tags</h3><ul style="z-index: -10;" class="wp-tag-cloud">
+	<li><a href="http://www.knutsel.org/tag/arduino-nl/?lang=nl" 
+class="tag-link-55 nktagcloud-15" title="4 topics" rel="tag" 
+style="font-size: 15pt;">Arduino</a></li>
+	<li><a href="http://www.knutsel.org/tag/arduino-shield-nl/?lang=nl" 
+class="tag-link-56 nktagcloud-17" title="5 topics" rel="tag" 
+style="font-size: 17.3333pt;">Arduino Shield</a></li>
+	<li><a href="http://www.knutsel.org/tag/batchpcb-nl/?lang=nl" 
+class="tag-link-57 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">BatchPCB</a></li>
+	<li><a href="http://www.knutsel.org/tag/bedankt-philips/?lang=nl" 
+class="tag-link-18 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">Bedankt Philips !</a></li>
+	<li><a href="http://www.knutsel.org/tag/behringer-bcr200-nl/?lang=nl" 
+class="tag-link-83 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">Behringer BCR200</a></li>
+	<li><a href="http://www.knutsel.org/tag/brokentoaster-nl/?lang=nl" 
+class="tag-link-59 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">BrokenToaster</a></li>
+	<li><a href="http://www.knutsel.org/tag/cc2500-nl/?lang=nl" 
+class="tag-link-60 nktagcloud-22" title="7 topics" rel="tag" 
+style="font-size: 22pt;">CC2500</a></li>
+	<li><a href="http://www.knutsel.org/tag/cc2530-nl/?lang=nl" 
+class="tag-link-61 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">CC2530</a></li>
+	<li><a href="http://www.knutsel.org/tag/circuit-people-nl/?lang=nl" 
+class="tag-link-62 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">Circuit People</a></li>
+	<li><a href="http://www.knutsel.org/tag/dhz-nl/?lang=nl" 
+class="tag-link-81 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">DHZ</a></li>
+	<li><a href="http://www.knutsel.org/tag/eagle-nl/?lang=nl" 
+class="tag-link-69 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">Eagle</a></li>
+	<li><a href="http://www.knutsel.org/tag/eurocircuits-nl/?lang=nl" 
+class="tag-link-63 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">EuroCircuits</a></li>
+	<li><a href="http://www.knutsel.org/tag/gerber-nl/?lang=nl" 
+class="tag-link-64 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">Gerber</a></li>
+	<li><a href="http://www.knutsel.org/tag/gold-phoenix-nl/?lang=nl" 
+class="tag-link-77 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">Gold Phoenix</a></li>
+	<li><a href="http://www.knutsel.org/tag/livingcolors-nl/?lang=nl" 
+class="tag-link-74 nktagcloud-22" title="7 topics" rel="tag" 
+style="font-size: 22pt;">Livingcolors</a></li>
+	<li><a href="http://www.knutsel.org/tag/makepcb-nl/?lang=nl" 
+class="tag-link-76 nktagcloud-10" title="2 topics" rel="tag" 
+style="font-size: 10.3333pt;">makepcb</a></li>
+	<li><a href="http://www.knutsel.org/tag/midi-controller-nl/?lang=nl" 
+class="tag-link-84 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">MIDI Controller</a></li>
+	<li><a href="http://www.knutsel.org/tag/pcb-nl/?lang=nl" 
+class="tag-link-78 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">PCB</a></li>
+	<li><a href="http://www.knutsel.org/tag/pcb-pool-nl/?lang=nl" 
+class="tag-link-80 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">PCB-Pool</a></li>
+	<li><a href="http://www.knutsel.org/tag/pcb-fabrikant-bl/?lang=nl" 
+class="tag-link-79 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">PCB Fabrikant</a></li>
+	<li><a href="http://www.knutsel.org/tag/processing-nl/?lang=nl" 
+class="tag-link-86 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">Processing</a></li>
+	<li><a href="http://www.knutsel.org/tag/quasar-uk-nl/?lang=nl" 
+class="tag-link-75 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">Quasar UK</a></li>
+	<li><a href="http://www.knutsel.org/tag/smd-nl/?lang=nl" 
+class="tag-link-68 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">SMD</a></li>
+	<li><a href="http://www.knutsel.org/tag/smd-solderen-nl/?lang=nl" 
+class="tag-link-82 nktagcloud-8" title="1 topic" rel="tag" 
+style="font-size: 8pt;">SMD Solderen</a></li>
+</ul>
+<h3>Categories</h3><select name="cat" id="cat" class="postform">
+	<option selected="selected" value="-1">Select Category</option>
+	<option class="level-0" value="31">DHZ&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="15">Garantie Vervallen&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="13">Kits&nbsp;&nbsp;(6)</option>
+	<option class="level-1" value="67">&nbsp;&nbsp;&nbsp;Arduino 
+shields&nbsp;&nbsp;(6)</option>
+	<option class="level-0" value="85">LivingColors&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="49">Open Source Hardware&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="51">PCB&nbsp;&nbsp;(4)</option>
+	<option class="level-0" value="11">Uncategorized&nbsp;&nbsp;(3)</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+	var dropdown = document.getElementById("cat");
+	function onCatChange() {
+		if ( dropdown.options[dropdown.selectedIndex].value > 0 ) {
+			location.href = "http://www.knutsel.org?lang=nl/?cat="+dropdown.options[dropdown.selectedIndex].value;
+		}
+	}
+	dropdown.onchange = onCatChange;
+/* ]]> */
+</script>
+
+<h3>Other People</h3>
+	<ul style="z-index: -20;" class="xoxo blogroll">
+<li><a href="http://www.kees.nl/" target="_blank">Kees : pictures and 
+hacks</a></li>
+<li><a href="http://www.arduino.nl/" target="_blank">Michel : Arduino, 
+Teaching and Interaction</a></li>
+<li><a href="http://blog.gepatto.nl/" target="_blank">Patrick : 
+ActionScript &amp; Arduino</a></li>
+
+	</ul>
+
+<h3>Stuff I use and like</h3>
+	<ul style="z-index: -30;" class="xoxo blogroll">
+<li><a href="http://www.findchips.com/" target="_blank">FindChips, the 
+parts meta search engine</a></li>
+<li><a href="http://www.samenkopen.net/" title="Samenkopen is a dutch 
+and belgian site for selling and buying stuff in bulk. I have sold some 
+of my kits there." target="_blank">Samenkopen</a></li>
+<li><a href="http://www.cadsoft.de/" title="Eagle is a free (as in beer)
+ Electronic CAD application. It is available for Windows, Mac and Linux 
+and is used by many hobbists and companies (like Sparkfun and Adafruit 
+)." target="_blank">Cadsoft Eagle</a></li>
+<li><a href="http://www.dealextreme.com/" title="“Build quality is low, 
+but product is unbeatable at this price.”…. oh, and free shipping." 
+target="_blank">DealExtreme</a></li>
+<li><a href="http://www.batchpcb.com/" title="BatchPCB is the Sparkfun 
+PCB service. Sparkfun collects small orders on panels and has them made 
+by Goldphoenix. For european customers shipping is expensive though.." 
+target="_blank">Batch PCB</a></li>
+<li><a href="http://www.makepcb.com/" title="MakePCB is a chinese low 
+cost PCB manufacturer. Communication is difficult but the boards are 
+fine and the price is great." target="_blank">Make PCB</a></li>
+<li><a href="http://www.digikey.com/" target="_blank">Digikey</a></li>
+
+	</ul>
+
+<h3>ARM Boards</h3>
+	<ul style="z-index: -40;" class="xoxo blogroll">
+<li><a href="http://www.virtualcogs.com/" target="_blank">Virtual Cogs</a></li>
+<li><a href="http://www.olimex.com/dev/arm_left.htm" target="_blank">Olimex
+ (frame alert..)</a></li>
+<li><a href="http://www.gumstix.com/" target="_blank">Gumstix</a></li>
+<li><a href="http://www.chumby.com/" target="_blank">Chumby</a></li>
+<li><a href="http://www.chumby.com/" target="_blank">Chumby</a></li>
+<li><a href="http://www.buglabs.net/products" target="_blank">Bug Labs</a></li>
+
+	</ul>
+
+<h3>Have stuff made</h3>
+	<ul style="z-index: -50;" class="xoxo blogroll">
+<li><a href="http://www.pololu.com/catalog/category/26" title=" 	  " 
+target="_blank">Pololu</a></li>
+<li><a href="http://www.pcb-pool.com/" target="_blank">PCB-Pool</a></li>
+<li><a href="http://www.pcb-pool.com/" target="_blank">PCB-Pool</a></li>
+<li><a href="http://www.thepcbshop.com/" target="_blank">PCB Shop</a></li>
+<li><a href="http://www.customlasercutting.com/" target="_blank">Laser 
+Cutting Pololu</a></li>
+<li><a href="http://www.ponoko.com/" target="_blank">Laser Cutting</a></li>
+<li><a href="http://www.pololu.com/catalog/product/446" target="_blank">Laser
+ Cut Stencil : Pololu</a></li>
+<li><a href="http://www.laser-stencil.com/lsuk/info.html" 
+target="_blank">Laser Cut Stencil : PCB-Pool</a></li>
+<li><a href="http://www.ohararp.com/Stencils.html" target="_blank">Laser
+ Cut Stencil : oharap</a></li>
+<li><a href="http://www.schaeffer-ag.de/" target="_blank">Frontplaten</a></li>
+<li><a href="http://www.fablab.nl/" target="_blank">Fablab</a></li>
+<li><a href="http://emachineshop.com/" target="_blank">e-Machineshop</a></li>
+<li><a href="http://www.shapeways.com/" target="_blank">3D printing</a></li>
+<li><a href="http://www.batchpcb.com/" title="BatchPCB is the Sparkfun 
+PCB service. Sparkfun collects small orders on panels and has them made 
+by Goldphoenix. For european customers shipping is expensive though.." 
+target="_blank">Batch PCB</a></li>
+<li><a href="http://www.makepcb.com/" title="MakePCB is a chinese low 
+cost PCB manufacturer. Communication is difficult but the boards are 
+fine and the price is great." target="_blank">Make PCB</a></li>
+
+	</ul>
+
+<h3>Parts Distributors</h3>
+	<ul style="z-index: -60;" class="xoxo blogroll">
+<li><a href="http://www.microchipdirect.com/" target="_blank">Microchip 
+parts</a></li>
+<li><a href="http://www.findchips.com/" target="_blank">FindChips, the 
+parts meta search engine</a></li>
+<li><a href="http://www.jelu.se/shop/index.php" target="_blank">Jelu : 
+home of many diy MP3 players</a></li>
+<li><a href="http://www.future-active.com/" target="_blank">Future 
+Electronics</a></li>
+<li><a href="http://www.jameco.com/" target="_blank">Jameco</a></li>
+<li><a href="http://www.mouser.com/" target="_blank">Mouser Electronics</a></li>
+<li><a href="http://www.rs-components.nl/" target="_blank">RS Components</a></li>
+<li><a href="http://www.farnell.com/" target="_blank">Farnell</a></li>
+<li><a href="http://www.conrad.nl/" target="_blank">Conrad</a></li>
+<li><a href="http://www.alcom.nl/" target="_blank">Alcom</a></li>
+<li><a href="http://www.digikey.com/" target="_blank">Digikey</a></li>
+
+	</ul>
+
+</div><div class="clear"></div>
+</div>
+<div id="footer">
+<span class="text">
+Copyright © 2010 <a href="http://www.knutsel.org/?lang=nl">Electronics 
+projects and kits</a> · Powered by <a href="http://www.wordpress.org/" 
+title="WordPress" target="_blank">WordPress</a> <br><a 
+href="http://www.lightworddesign.com/" target="_blank" title="Lightword 
+Theme">Lightword Theme</a> translated by <a 
+href="http://www.schnacken.com/" target="_blank">Schnacken</a> and <a 
+href="http://www.spielenarr.de/" target="_blank">Spiele</a>
+<a title="Naar boven" class="top" href="#top">Naar boven ↑</a>
+</span>
+</div>
+<script type="text/javascript" src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/menu.js"></script>
+
+
+<!-- tracker added by Ultimate Google Analytics plugin v1.6.0: http://www.oratransplant.nl/uga -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-12952268-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<script type="text/javascript">/* <![CDATA[ */ Cufon.now(); /* ]]> */ </script>
+<script type="text/javascript" src="Gebruik%20van%20het%20CC2500%20Arduino%20Shield%20%C2%AB%20Electronics%20projects%20and%20kits_fichiers/tabs.js"></script>
+<script type="text/javascript">jQuery(document).ready(function(){jQuery('tabs').lightword_tabs({linkClass : 'tabs',containerClass : 'tab-content',linkSelectedClass : 'selected',containerSelectedClass : 'selected',onComplete : function(){}});});</script>
+<a href="http://www.nkuttler.de/wordpress/nktagcloud/">Better Tag Cloud</a><br></div>
+</body></html>
