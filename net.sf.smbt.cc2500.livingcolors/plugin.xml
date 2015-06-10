@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.sf.net/smbt/cc2250/ezlivingcolors1/1.0"
+            class="net.sf.smbt.cc2250.ezlivingcolors1.Ezlivingcolors1Package"
+            genModel="model/ezlivingcolors1.genmodel"/>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdInterpreter">
+      <cmdInterpreter
+            ID="net.sf.smbt.cc2500.livingcolors.cmdInterpreter"
+            interpreter="net.sf.smbt.cc2500.livingcolors.handlers.LivingColorsCmdInterpreter">
+      </cmdInterpreter>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.frameInterpreter">
+      <frameInterpreter
+            ID="net.sf.smbt.cc2500.livingcolors.frameInterpreter"
+            interpreter="net.sf.smbt.cc2500.livingcolors.handlers.LivingColorsFrameInterpreter">
+      </frameInterpreter>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdHandler">
+      <cmdHandler
+            ID="net.sf.smbt.cc2500.livingcolors.cmdHandler"
+            handler="net.sf.smbt.cc2500.livingcolors.handlers.LivingColorsQxEventHandler">
+      </cmdHandler>
+   </extension>
+   <extension
+         point="net.sf.smbt.comm.topology.protocol">
+      <engine
+      		alias="livingcolors"
+            ID="net.sf.smbt.cc2500.livingcolors"
+            cmdInterpreterID="net.sf.smbt.cc2500.livingcolors.cmdInterpreter"
+            eventHandler="net.sf.smbt.cc2500.livingcolors.cmdHandler"
+            frameInterpreter="net.sf.smbt.cc2500.livingcolors.frameInterpreter"
+            instance="0"
+            transports="USB"
+      		desc="Protocol handling Living color device packets as sent to A-Block Arduino shield w/ serial connection"      
+      >
+      </engine>
+   </extension>
+
+</plugin>

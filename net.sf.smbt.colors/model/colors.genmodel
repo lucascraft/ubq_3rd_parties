@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText=" Ubiquisense - A smart ambient utilities framework &#xA; &#xA; Copyright (c) 2008 - 2010, Lucas Bigeardel&#xA; &#xA; The library is released under:&#xA; &#xA; A) LGPL&#xA; &#xA; This library is free software; you can redistribute it and/or&#xA; modify it under the terms of the GNU Lesser General Public&#xA; License as published by the Free Software Foundation; either&#xA; version 3 of the License, or (at your option) any later version.&#xA; &#xA; This library is distributed in the hope that it will be useful,&#xA; but WITHOUT ANY WARRANTY; without even the implied warranty of&#xA; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU&#xA; Lesser General Public License for more details.&#xA; &#xA; You should have received a copy of the GNU Lesser General&#xA; Public License along with this library; if not, write to the&#xA; Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,&#xA; Boston, MA 02110-1301 USA&#xA;  &#xA; B) EPL&#xA;  &#xA; All rights reserved. This program and the accompanying materials&#xA; are made available under the terms of the Eclipse Public License v1.0&#xA; which accompanies this distribution, and is available at&#xA; http://www.eclipse.org/legal/epl-v10.html&#xA; &#xA; Contributors:&#xA;      Lucas Bigeardel &lt;lucas.bigeardel@gmail.com> - Initial API and implementation&#xA; &#xA;"
+    modelDirectory="/net.sf.smbt.colors/src" modelPluginID="net.sf.smbt.colors" modelName="Colors"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" reflectiveDelegation="true"
+    importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective" complianceLevel="5.0"
+    copyrightFields="false" language="">
+  <foreignModel>colors.ecore</foreignModel>
+  <genPackages prefix="Colors" basePackage="net.sf.smbt.model" disposableProviderFactory="true"
+      ecorePackage="colors.ecore#/">
+    <genClasses ecoreClass="colors.ecore#//HSB">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute colors.ecore#//HSB/hue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute colors.ecore#//HSB/saturation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute colors.ecore#//HSB/brightness"/>
+    </genClasses>
+    <genClasses ecoreClass="colors.ecore#//RGB">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute colors.ecore#//RGB/red"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute colors.ecore#//RGB/green"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute colors.ecore#//RGB/blue"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="colors.ecore#//Color"/>
+  </genPackages>
+</genmodel:GenModel>

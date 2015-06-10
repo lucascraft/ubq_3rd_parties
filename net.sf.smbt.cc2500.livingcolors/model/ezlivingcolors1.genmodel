@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.cc2500.livingcolors/src-model"
+    editorDirectory="" modelPluginID="net.sf.smbt.cc2500.livingcolors" modelName="Ezlivingcolors1"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" reflectiveDelegation="true"
+    testsDirectory="" importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective"
+    complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../net.sf.xqz.engine/model/temporal.genmodel#//cmd">
+  <foreignModel>ezlivingcolors1.ecore</foreignModel>
+  <genPackages prefix="Ezlivingcolors1" basePackage="net.sf.smbt.cc2250" disposableProviderFactory="true"
+      ecorePackage="ezlivingcolors1.ecore#/">
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivingColorsSetRGBCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsSetRGBCmd/addr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsSetRGBCmd/r"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsSetRGBCmd/g"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsSetRGBCmd/b"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsSetRGBCmd/index"/>
+    </genClasses>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivingColorsSetHSVCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsSetHSVCmd/addr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsSetHSVCmd/h"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsSetHSVCmd/s"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsSetHSVCmd/v"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsSetHSVCmd/index"/>
+    </genClasses>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivingColorsInitCmd"/>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivingColorsGetMaxNumLampsCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsGetMaxNumLampsCmd/result"/>
+    </genClasses>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivingColorsAddLampCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsAddLampCmd/addr"/>
+    </genClasses>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivingColorsLearnLampsCmd"/>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivinColorsClearLampsCmd"/>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivingColorsTurnLampOnRGBCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsTurnLampOnRGBCmd/index"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsTurnLampOnRGBCmd/r"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsTurnLampOnRGBCmd/g"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsTurnLampOnRGBCmd/b"/>
+    </genClasses>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivingColorsTurnLampOnHSVCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsTurnLampOnHSVCmd/index"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsTurnLampOnHSVCmd/h"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsTurnLampOnHSVCmd/s"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsTurnLampOnHSVCmd/v"/>
+    </genClasses>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivingColorsTurnOffLampCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsTurnOffLampCmd/index"/>
+    </genClasses>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivingColorsSetAddressCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsSetAddressCmd/addr"/>
+    </genClasses>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LiivngColorsSendCommandCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LiivngColorsSendCommandCmd/cmd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LiivngColorsSendCommandCmd/addr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LiivngColorsSendCommandCmd/h"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LiivngColorsSendCommandCmd/s"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LiivngColorsSendCommandCmd/v"/>
+    </genClasses>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivingColorsCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsCmd/hex"/>
+    </genClasses>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivingColorsCheckAddressCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsCheckAddressCmd/addr"/>
+    </genClasses>
+    <genClasses ecoreClass="ezlivingcolors1.ecore#//LivingColorsGetLampCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsGetLampCmd/result"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezlivingcolors1.ecore#//LivingColorsGetLampCmd/index"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
