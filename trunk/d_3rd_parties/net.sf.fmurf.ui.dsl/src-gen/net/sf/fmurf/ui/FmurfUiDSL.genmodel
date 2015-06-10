@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.fmurf.ui.dsl/src-gen"
+    editDirectory="/net.sf.fmurf.ui.dsl.edit/src" editorDirectory="/net.sf.fmurf.ui.dsl.editor/src"
+    modelPluginID="net.sf.fmurf.ui.dsl" forceOverwrite="true" modelName="FmurfUiDSL"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="net.sf.fmurf.ui.dsl.edit"
+    editorPluginID="net.sf.fmurf.ui.dsl.editor">
+  <genPackages prefix="FmurfUiDSL" basePackage="net.sf.fmurf.ui" disposableProviderFactory="true"
+      ecorePackage="FmurfUiDSL.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="FmurfUiDSL.ecore#//FMFProximaVisibleEnum">
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFProximaVisibleEnum/VISIBLE"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFProximaVisibleEnum/HIDDEN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="FmurfUiDSL.ecore#//FMFFidStyleEnum">
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidStyleEnum/DISC"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidStyleEnum/SQUARE"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidStyleEnum/PENTAGON"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidStyleEnum/HEXAGON"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidStyleEnum/EIGHTSTAR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="FmurfUiDSL.ecore#//FMFKind">
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFKind/SIN_OSC"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFKind/SQR_OSC"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFKind/PULSE_OSC"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFKind/TRI_OSC"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFKind/SAW_OSC"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFKind/SEQUENCER"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFKind/SAMPLER"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFKind/ECHO"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFKind/REVERB"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="FmurfUiDSL.ecore#//FMFFidFunctionEnum">
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidFunctionEnum/KNOB"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidFunctionEnum/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="FmurfUiDSL.ecore#//FMFFidKind">
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidKind/SinOsc"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidKind/SqrOsc"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidKind/TriOsc"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidKind/SawOsc"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidKind/PulseOsc"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidKind/Phasor"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidKind/Sequencer"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidKind/Sampler"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidKind/Reverb"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidKind/Echo"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="FmurfUiDSL.ecore#//FMFFidColorEnum">
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Aquamarine"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Bakers_Chocolate"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Black"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Brass"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Bright_Gold"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Brown"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Bronze"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Gold"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Grey"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Copper"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Coral"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Cyan"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Dark_Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Green_Yellow"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Magenta"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Maroon"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Medium_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Sienna"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Silver"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Salmon"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Orange"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Pink"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Red"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Summer_Sky"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Tan"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Thistle"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Turquoise"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Very_Dark_Brown"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Very_Light_Grey"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Violet"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Violet_Red"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Wheat"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/White"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Yellow"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Yellow_Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Dark_Yellow"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Bronze_II"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Cadet_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Cool_Copper"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Corn_Flower_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Dark_Brown"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Dark_Green_Copper"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Dark_Olive_Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Dark_Orchid"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Dark_Purple"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Dark_Slate_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Dark_Turquoise"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Dark_Tan"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Dark_Wood"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Dim_Grey"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Dusty_Rose"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Feldspar"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Firebrick"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Forest_Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Goldenrod"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Green_Copper"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Hunter_Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Indian_Red"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Khaki"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Light_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Light_Grey"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Light_Steel_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Light_Wood"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Lime_Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Mandarian_Orange"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Medium_Aquamarine"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Medium_Forest_Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Medium_Goldenrod"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Medium_Orchid"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Medium_Sea_Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Medium_Slate_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Medium_Spring_Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Medium_Turquoise"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Medium_Violet_Red"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Medium_Wood"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Midnight_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Navy_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Neon_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Neon_Pink"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/New_Midnight_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/New_Tan"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Old_Gold"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Orange_Red"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Orchid"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Pale_Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Plum"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Quartz"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Rich_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Scarlet"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Sea_Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Semi_Sweet_Chocolate"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Sky_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Slate_Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Spicy_Pink"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Spring_Green"/>
+      <genEnumLiterals ecoreEnumLiteral="FmurfUiDSL.ecore#//FMFFidColorEnum/Steel_Blue"/>
+    </genEnums>
+    <genClasses ecoreClass="FmurfUiDSL.ecore#//FMFUI">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FmurfUiDSL.ecore#//FMFUI/settings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FmurfUiDSL.ecore#//FMFUI/fiducials"/>
+    </genClasses>
+    <genClasses ecoreClass="FmurfUiDSL.ecore#//Fiducial">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//Fiducial/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//Fiducial/uid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//Fiducial/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//Fiducial/kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//Fiducial/fg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//Fiducial/bg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//Fiducial/radius"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//Fiducial/proxima"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//Fiducial/proximaVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//Fiducial/function"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//Fiducial/range"/>
+    </genClasses>
+    <genClasses ecoreClass="FmurfUiDSL.ecore#//FMFSettings">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//FMFSettings/oscReceivePort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//FMFSettings/oscSendAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//FMFSettings/oscSendPort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//FMFSettings/tuioPort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//FMFSettings/liveRate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FmurfUiDSL.ecore#//FMFSettings/processingRate"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

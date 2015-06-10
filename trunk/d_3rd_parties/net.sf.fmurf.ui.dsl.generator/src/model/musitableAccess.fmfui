@@ -1,0 +1,460 @@
+settings : {
+		OscReceivePort: 4444
+		OscSendAddress: 'localhost'
+		OscSendPort: 4445
+		TuioPort: 3333
+		liveRate: 25
+		processingRate: 25
+}
+
+fiducial fid0 : 0 {
+	style: DISC
+	kind: SIN_OSC
+	foreground: Red 
+	background: Red 
+	radius: 30
+	proxima: 170
+	proximaVisible: VISIBLE
+	function: KNOB
+	range: 100
+}
+fiducial fid1 : 1 {
+	style:DISC
+	kind: SQR_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid2 : 2 {
+	style:DISC
+	kind: TRI_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid3 : 3 {
+	style:DISC
+	kind: SAW_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid4 : 4 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid5 : 5 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid6 : 6 {
+	style:DISC
+	kind: ECHO
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid7 : 7 {
+	style:DISC
+	kind: REVERB
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid8 : 8 {
+	style:DISC
+	kind: SAMPLER
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid9 : 9 {
+	style:DISC
+	kind: SAMPLER
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid10 : 10 {
+	style:DISC
+	kind: SAMPLER
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid11 : 11 {
+	style:DISC
+	kind: SQR_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid12 : 12 {
+	style:DISC
+	kind: TRI_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid13 : 13 {
+	style:DISC
+	kind: SAW_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid14 : 14 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid15 : 15 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid16 : 16 {
+	style:DISC
+	kind: ECHO
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid17 : 17 {
+	style:DISC
+	kind: REVERB
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid18 : 18 {
+	style:DISC
+	kind: SAMPLER
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid19 : 19 {
+	style:DISC
+	kind: SAMPLER
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid20 : 20 {
+	style:DISC
+	kind: SAMPLER
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid21 : 21 {
+	style:DISC
+	kind: SQR_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid22 : 22 {
+	style:DISC
+	kind: TRI_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid23 : 23 {
+	style:DISC
+	kind: SAW_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid24 : 24 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid25 : 25 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid26 : 26 {
+	style:DISC
+	kind: ECHO
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid27 : 27 {
+	style:DISC
+	kind: REVERB
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid28 : 28 {
+	style:DISC
+	kind: SAMPLER
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid29 : 29 {
+	style:DISC
+	kind: SAMPLER
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid30 : 30 {
+	style: DISC
+	kind: SIN_OSC
+	foreground: Red 
+	background: Red 
+	radius: 30
+	proxima: 170
+	proximaVisible: VISIBLE
+	function: KNOB
+	range: 100
+}
+fiducial fid31 : 31 {
+	style:DISC
+	kind: SQR_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid32 : 32 {
+	style:DISC
+	kind: TRI_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid33 : 33 {
+	style:DISC
+	kind: SAW_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid34 : 34 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid35 : 35 {
+	style:DISC
+	kind: SIN_OSC
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid36 : 36 {
+	style:DISC
+	kind: ECHO
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid37 : 37 {
+	style:DISC
+	kind: REVERB
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid38 : 38 {
+	style:DISC
+	kind: SAMPLER
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid39 : 39 {
+	style:DISC
+	kind: SAMPLER
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}
+fiducial fid40 : 40 {
+	style:DISC
+	kind: SAMPLER
+	foreground:Blue
+	background: Gold
+	radius:30
+	proxima:170
+	proximaVisible:VISIBLE
+	function: KNOB 
+	range: 100
+}

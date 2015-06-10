@@ -1,0 +1,176 @@
+grammar net.sf.fmurf.ui.FmurfUiDSL with org.eclipse.xtext.common.Terminals
+
+generate fmurfUiDSL "http://www.sf.net/fmurf/ui/FmurfUiDSL"
+
+FMFUI :
+	settings=FMFSettings
+	(fiducials+=Fiducial)*;
+	
+
+Fiducial:
+	'fiducial' name=ID ':' uid=INT '{'
+		'style:' style=FMFFidStyleEnum
+		'kind:' kind=FMFKind
+		'foreground:' fg=FMFFidColorEnum
+		'background:' bg=FMFFidColorEnum
+		'radius:' radius=INT
+		'proxima:' proxima=INT
+		'proximaVisible:' proximaVisible=FMFProximaVisibleEnum
+		'function:' function=FMFFidFunctionEnum
+		'range:' range=INT
+	'}'
+;
+	
+FMFSettings:
+	'settings : {' 
+		'OscReceivePort:' oscReceivePort=INT
+		'OscSendAddress:' oscSendAddress=STRING
+		'OscSendPort:' oscSendPort=INT
+		'TuioPort:' tuioPort=INT
+		'liveRate:' liveRate=INT
+		'processingRate:' processingRate=INT
+	'}'
+;
+
+enum FMFProximaVisibleEnum:
+	VISIBLE |
+	HIDDEN
+;
+enum FMFFidStyleEnum:
+	DISC |
+	SQUARE |
+	PENTAGON |
+	HEXAGON |
+	EIGHTSTAR
+;
+
+enum FMFKind:
+	SIN_OSC |
+	SQR_OSC |
+	PULSE_OSC |
+	TRI_OSC |
+	SAW_OSC |
+	SEQUENCER |
+	SAMPLER |
+	ECHO |
+	REVERB
+;
+
+enum FMFFidFunctionEnum:
+	KNOB |
+	NONE
+;
+
+enum FMFFidKind :
+SinOsc |
+SqrOsc|
+TriOsc|
+SawOsc |
+PulseOsc |
+Phasor |
+Sequencer |
+Sampler | 
+Reverb |
+Echo
+;
+
+enum FMFFidColorEnum:
+  	Aquamarine | // "Aquamarine"
+	Bakers_Chocolate | // "Baker's Chocolate"
+	Black | // "Black"
+	Blue | // "Blue"
+	Brass | // "Brass"
+	Bright_Gold | // "Bright Gold"
+	Brown | // "Brown"
+	Bronze | // "Bronze"
+	Gold | // "Gold"
+	Grey | // "Grey"
+	Green | // "Green"
+	Copper | // "Copper"
+	Coral | // "Coral"
+	Cyan | // "Cyan"
+	Dark_Green | // "Dark Green"
+	Green_Yellow | // "Green Yellow"
+	Magenta | // "Magenta"
+	Maroon | // "Maroon"
+	Medium_Blue | // "Medium Blue"
+	Sienna | // "Sienna"
+	Silver | // "Silver"
+	Salmon | // "Salmon"
+	Orange | // "Orange"
+	Pink | // "Pink"
+	Red | // "Red"
+	Summer_Sky | // "Summer Sky"
+	Tan | // "Tan"
+	Thistle | // "Thistle"
+	Turquoise | // "Turquoise"
+	Very_Dark_Brown | // "Very Dark Brown"
+	Very_Light_Grey | // "Very Light Grey"
+	Violet | // "Violet"
+	Violet_Red | // "Violet Red"
+	Wheat | // "Wheat"
+	White | // "White"
+	Yellow | // "Yellow"
+	Yellow_Green | // "Yellow Green"
+	Dark_Yellow | // "Dark Yellow"
+	Bronze_II | // "Bronze II"
+	Cadet_Blue | // "Cadet Blue"
+    Cool_Copper | // "Cool Copper"
+	Corn_Flower_Blue | // "Corn Flower Blue"
+	Dark_Brown | // "Dark Brown"
+	Dark_Green_Copper | // "Dark Green Copper"
+	Dark_Olive_Green | // "Dark Olive Green"
+	Dark_Orchid | // "Dark Orchid"
+	Dark_Purple | // "Dark Purple"
+	Dark_Slate_Blue | // "Dark Slate Blue"
+	Dark_Turquoise | // "Dark Turquoise"
+	Dark_Tan | // "Dark Tan"
+	Dark_Wood | // "Dark Wood"
+	Dim_Grey | // "Dim Grey"
+	Dusty_Rose | // "Dusty Rose"
+	Feldspar | // "Feldspar"
+	Firebrick | // "Firebrick"
+	Forest_Green | // "Forest Green"
+	Goldenrod | // "Goldenrod"
+	Green_Copper | // "Green Copper"
+	Hunter_Green | // "Hunter Green"
+	Indian_Red | // "Indian Red"
+	Khaki | // "Khaki"
+	Light_Blue | // "Light Blue"
+	Light_Grey | // "Light Grey"
+	Light_Steel_Blue | // "Light Steel Blue"
+	Light_Wood | // "Light Wood"
+	Lime_Green | // "Lime Green"
+	Mandarian_Orange | // "Mandarian Orange"
+	Medium_Aquamarine | // "Medium Aquamarine"
+	Medium_Forest_Green | // "Medium Forest Green"
+	Medium_Goldenrod | // "Medium Goldenrod"
+	Medium_Orchid | // "Medium Orchid"
+	Medium_Sea_Green | // "Medium Sea Green"
+	Medium_Slate_Blue | // "Medium Slate Blue"
+	Medium_Spring_Green | // "Medium Spring Green"
+	Medium_Turquoise | // "Medium Turquoise"
+	Medium_Violet_Red | // "Medium Violet Red"
+	Medium_Wood | // "Medium Wood"
+	Midnight_Blue | // "Midnight Blue"
+	Navy_Blue | // "Navy Blue"
+	Neon_Blue | // "Neon Blue"
+	Neon_Pink | // "Neon Pink"
+	New_Midnight_Blue | // "New Midnight Blue"
+	New_Tan | // ""
+	Old_Gold | // "Old Gold"
+	Orange_Red | // "Orange Red"
+	Orchid | // "Orchid"
+	Pale_Green | // "Pale Green"
+	Plum | // "Plum"
+	Quartz | // "Quartz"
+	Rich_Blue | // "Rich Blue"
+	Scarlet | // "Scarlet"
+	Sea_Green | // "Sea Green"
+	Semi_Sweet_Chocolate | // "Semi-Sweet Chocolate"
+	Sky_Blue | // "Sky Blue"
+	Slate_Blue | // "Slate Blue"
+	Spicy_Pink | // "Spicy Pink"
+	Spring_Green | // "Spring Green"
+	Steel_Blue // "Steel Blue"
+;

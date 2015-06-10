@@ -1,0 +1,362 @@
+«IMPORT fmurfUiDSL»;
+
+«EXTENSION templates::Extensions»
+
+«DEFINE main FOR FMFUI»
+«FILE "settings.xml"»
+<smurf>
+  <settings>
+      <OscSendAddress>«this.settings.oscSendAddress»</OscSendAddress>
+      <OscSendPort>«this.settings.oscReceivePort»</OscSendPort>
+      <OscReceivePort>«this.settings.oscSendPort»</OscReceivePort>
+      <TuioPort>«this.settings.tuioPort»</TuioPort>
+  </settings>
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»
+  <fid> 
+	  <id>«e.uid»</id>
+	  <style>«e.style»</style>
+	  <kind>«e.kind.toString()»</kind>
+	  <BG>«e.bg»</BG>
+	  <FG>«e.fg»</FG>
+	  <radius>«e.radius»</radius>
+	  <proxima>«e.proxima»</proxima>
+	  <proximaVisible>«e.proximaVisible»</proximaVisible>
+	  <function>«e.function»</function>
+	  <range>«e.range»</range>
+  </fid>
+«ENDFOREACH»
+</smurf>
+«ENDFILE»
+
+«FILE "musitable.ck"»
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»«getChuckUAnaNameFromFiducialKind(e)» fid«e.uid» => FFT fft«e.uid» =^ Flux flux«e.uid» => blackhole; 
+«ENDFOREACH»
+
+UAnaBlob «FOREACH this.fiducials.typeSelect(Fiducial) AS e SEPARATOR  ', '»blob«e.uid»«ENDFOREACH»;
+float «FOREACH this.fiducials.typeSelect(Fiducial) AS e SEPARATOR  ', '»fid«e.uid»Gain«ENDFOREACH»;
+
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»«getChuckUGenSettingsFromFiducialKind(e)»«ENDFOREACH»
+//
+// Live data feedback
+//
+OscSend send;
+
+send.setHost("«settings.oscSendAddress»", «settings.oscSendPort»);
+
+fun void sendLivedata(int _fid, UAnaBlob _blob) {
+    send.startMsg("/smurf/fid/" + _fid + "/livedata","f");
+    _blob.fval(0) => send.addFloat;
+}
+
+fun void computeFlux(int _fid) {
+    while(true) {
+        «settings.liveRate»::ms => now;
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»«IF (this.fiducials.typeSelect(Fiducial).get(0) == e)»if«ELSE»else if«ENDIF»(_fid == «e.uid») {
+            flux«e.uid».upchuck() @=> blob«e.uid»;
+            sendLivedata(_fid, blob«e.uid»);
+        }«ENDFOREACH»
+     }
+}
+
+fun void handlerConnectionUpdate(int _from, int _to, float _distRatio) {
+	if (_distRatio > 0) {
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»«IF (this.fiducials.typeSelect(Fiducial).get(0) == e)»if«ELSE»else if«ENDIF»(_from == «e.uid» && _to == -440) {
+		«IF isOscGainCompatible(e)»
+            	setOscGain(_from, (1.0 - _distRatio) * fid«e.uid»Gain);
+        «ENDIF»}«ENDFOREACH»
+    }
+}
+
+fun void handleDACConnection(int _fid, int status) {
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»«IF (this.fiducials.typeSelect(Fiducial).get(0) == e)»    if«ELSE»else if«ENDIF»(_fid == «e.uid») {
+        if (status == 0) { // DISCONNECTION
+            fid«e.uid» =< dac;
+        } else {
+            fid«e.uid» => dac;
+        }
+    }«ENDFOREACH»
+}
+
+
+fun void handleFidConnection(int _from, int _to) {
+«FOREACH this.fiducials.typeSelect(Fiducial) AS from»
+«FOREACH this.fiducials.typeSelect(Fiducial) AS to»
+«IF from != to»«IF from.uid == 0 && to.uid == 1»/*  */ if«ELSE»else if«ENDIF» (_from == «from.uid» && _to == «to.uid») {
+        fid«from.uid» => fid«to.uid»;
+	}«ENDIF»«ENDFOREACH»«ENDFOREACH»
+}
+
+fun void handleFidDisconnection(int _from, int _to) {
+«FOREACH this.fiducials.typeSelect(Fiducial) AS from»
+«FOREACH this.fiducials.typeSelect(Fiducial) AS to»
+«IF from != to»«IF from.uid == 0 && to.uid == 1»/*  */ if«ELSE»else if«ENDIF» (_from == «from.uid» && _to == «to.uid») {
+        fid«from.uid» =< fid«to.uid»;
+	}«ENDIF»«ENDFOREACH»«ENDFOREACH»
+}
+
+fun void setOscFreq(int _id, float _freq) {
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»
+«IF isOscFreqCompatible(e)»«IF (this.fiducials.typeSelect(Fiducial).get(0) == e)»    if«ELSE»else if«ENDIF»(_id == «e.uid») {
+        _freq => fid«e.uid».freq;
+    }«ENDIF»«ENDFOREACH»
+}
+
+fun void setOscGain(int _id, float _gain) {
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»
+«IF isOscGainCompatible(e)»«IF (this.fiducials.typeSelect(Fiducial).get(0) == e)»    if«ELSE»else if«ENDIF»(_id == «e.uid») {
+        _gain*«getOscGainFromKind(e)» => fid«e.uid».gain;
+    }«ENDIF»«ENDFOREACH» else if (_id == -440) {
+        _gain => dac.gain;
+    }
+}
+
+
+OscRecv recv;
+
+«settings.oscReceivePort» => recv.port;
+
+recv.listen();
+
+recv.event( "/smurf/connection/add, i, i, i" ) @=> OscEvent connAddListener;
+recv.event( "/smurf/connection/update, i, i, i, f" ) @=> OscEvent connUpdateListener;
+recv.event( "/smurf/connection/remove, i, i, i" ) @=> OscEvent connRemoveListener;
+
+recv.event( "/smurf/beat" ) @=> OscEvent beat;
+
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»
+recv.event( "/smurf/fid/«e.uid»/bang, f, f, f, f" ) @=> OscEvent fidBang«e.uid»;
+recv.event( "/smurf/fid/«e.uid»/add, f, f, f" ) @=> OscEvent fidAdd«e.uid»;
+recv.event( "/smurf/fid/«e.uid»/update, f, f, f, f" ) @=> OscEvent fidUpdate«e.uid»;
+recv.event( "/smurf/fid/«e.uid»/remove, f, f, f" ) @=> OscEvent fidRemove«e.uid»;
+«ENDFOREACH»
+
+//recv.event( "/smurf/fid/11/bang, f, f, f, f" ) @=> OscEvent fidBang10;
+//recv.event( "/smurf/fid/11/add, f, f, f" ) @=> OscEvent fidAdd10;
+//recv.event( "/smurf/fid/11/update, f, f, f, f" ) @=> OscEvent fidUpdate10;
+//recv.event( "/smurf/fid/11/remove, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/0, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/1, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/2, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/3, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/4, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/5, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/6, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/7, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/8, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/9, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/10, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/11, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/12, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/13, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/14, f, f, f" ) @=> OscEvent fidRemove10;
+//recv.event( "/smurf/fid/11/tic/15, f, f, f" ) @=> OscEvent fidRemove10;
+
+recv.event( "/smurf/fid/-440/update, f, f, f, f" ) @=> OscEvent dacUpdate;
+recv.event( "/smurf/fid/-440/bang, f, f, f, f" ) @=> OscEvent dacBang;
+
+//
+// Connection add event listener
+//
+fun void connAdd(OscEvent _connAdd) {
+    while ( true )
+    {
+        _connAdd => now;
+        while(_connAdd.nextMsg() != 0) 
+        {
+            _connAdd.getInt() => int from;
+            _connAdd.getInt() => int to;
+            _connAdd.getInt() => int status;
+            <<< "got ADD connection [" + from + " -> " + to + "] from (via OSC):" >>>;
+
+            if (to == -440) {
+                handleDACConnection(from, 1);
+            } else {
+                handleFidConnection(from, to);
+            }
+        }            
+    }
+}
+
+//
+// Connection update OSC listener
+//
+fun void connUpdate(OscEvent _connUpdate) {
+    while ( true )
+    {
+        _connUpdate => now;
+        while(_connUpdate.nextMsg() != 0) 
+        {
+            _connUpdate.getInt() => int from;
+            _connUpdate.getInt() => int to;
+            _connUpdate.getInt() => int status;
+            _connUpdate.getFloat() => float dist;
+            <<< "got UPDATE connection [" + from + " -> " + to + " (" + dist + ")] (via OSC):" >>>;
+            
+            handlerConnectionUpdate(from, to, dist);
+        }            
+    }
+}
+
+//
+// Connection remove event listener
+//
+fun void connRemove(OscEvent _connRemove) {
+    while ( true )
+    {
+        _connRemove => now;
+        while(_connRemove.nextMsg() != 0) 
+        {
+            _connRemove.getInt() => int from;
+            _connRemove.getInt() => int to;
+            _connRemove.getInt() => int status;
+            <<< "got REMOVE connection [" + from + " -> " + to + "] from (via OSC):" >>>;
+            if (to == -440) {
+                handleDACConnection(from, 0);
+            } else {
+                handleFidDisconnection(from, to);
+           }
+        }            
+    }
+}
+
+//
+// Fiducial add event listener
+//
+fun void add(OscEvent _fidAdd, int _fid) {
+    while ( true )
+    {
+        _fidAdd => now;
+        while(_fidAdd.nextMsg() != 0) 
+        {
+            _fidAdd.getFloat() => float fX;
+            _fidAdd.getFloat() => float fY;
+            _fidAdd.getFloat() => float fAngle;
+            <<< "got ADD fid #" + _fid + " (via OSC):" >>>;
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»
+«IF isOscFreqCompatible(e)»«IF (this.fiducials.typeSelect(Fiducial).get(0) == e)»    if«ELSE»else if«ENDIF»(_fid == «e.uid») {
+        		fAngle => fid«e.uid».freq;
+    		}«ENDIF»«ENDFOREACH»
+        }            
+    }
+}
+
+//
+// Fiducial update event listener
+//
+fun void update(OscEvent _fidUpdate, int _fid) {
+    while ( true )
+    {
+        _fidUpdate => now;
+        while(_fidUpdate.nextMsg() != 0) 
+        {
+            _fidUpdate.getFloat() => float fX;
+            _fidUpdate.getFloat() => float fY;
+            _fidUpdate.getFloat() => float fAngle;
+            _fidUpdate.getFloat() => float fLevel;
+            <<< "got UPDATE fid #" + _fid + " (via OSC):" >>>;
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»
+«IF isOscFreqCompatible(e)»«IF (this.fiducials.typeSelect(Fiducial).get(0) == e)»    if«ELSE»else if«ENDIF»(_fid == «e.uid») {
+        		setOscFreq(_fid, 500 * fAngle);
+    		}«ELSEIF isUGenRateCompatible(e)» 		  if (_fid == «e.uid») {
+                fAngle => fid«e.uid».rate;
+            }«ENDIF»«ENDFOREACH»
+            setOscGain(_fid, fLevel);
+         }            
+    }
+}
+
+//
+// Fiducial remove event listener
+//
+fun void remove(OscEvent _fidRemove, int _fid) {
+    while ( true )
+    {
+        _fidRemove => now;
+        while(_fidRemove.nextMsg() != 0) 
+        {
+//            _fidRemove.getFloat() => float fX;
+//            _fidRemove.getFloat() => float fY;
+//            _fidRemove.getFloat() => float fAngle;
+              <<< "got REMOVE fid #" + _fid + " (via OSC):" >>>;
+//            <<< "got remove fid #0 X (via OSC):", fX >>>;
+//            <<< "got remove fid #0 Y (via OSC):", fY >>>;
+//            <<< "got remove fid #0 Angle (via OSC):", fAngle >>>;
+            //0.0 => fiducials["fid"+_fid.id].osc.gain;
+            «FOREACH this.fiducials.typeSelect(Fiducial) AS e»«IF isUGenPosCompatible(e)»    		if (_fid == «e.uid») {
+                "/gitSmurf/fmurf/3rdParties/samples/bank_01/01_sax.wav" => fid«e.uid».read;
+                0 => fid«e.uid».pos;
+            }«ENDIF»«ENDFOREACH» 
+        }            
+    }
+}
+
+//
+// Fiducial bang event listener 
+//
+fun void bang(OscEvent _fidBang, int _fid) {
+    while ( true )
+    {
+        _fidBang => now;
+        while(_fidBang.nextMsg() != 0) 
+        {
+            _fidBang.getFloat() => float fX;
+            _fidBang.getFloat() => float fY;
+            _fidBang.getFloat() => float fAngle;
+            _fidBang.getFloat() => float fLevel;
+            <<< "got BANG fid #" + _fid + " (via OSC):" >>>;
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»«IF isOscFreqCompatible(e)»    		if (_fid == «e.uid») {
+                setOscFreq(_fid, 0.9*500 * fAngle);
+            }«ENDIF»«ENDFOREACH»  
+            «FOREACH this.fiducials.typeSelect(Fiducial) AS e»
+«IF isUGenPosCompatible(e)»		if (_fid == «e.uid») {
+                0.9 * fAngle => fid«e.uid».rate;
+            }«ENDIF»«ENDFOREACH» 
+                                    
+            50::ms => now;
+
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»«IF isOscFreqCompatible(e)»    		if (_fid == «e.uid») {
+                setOscFreq(_fid, 500 * fAngle);
+            }«ENDIF»«ENDFOREACH»  
+            «FOREACH this.fiducials.typeSelect(Fiducial) AS e»
+«IF isUGenPosCompatible(e)»		if (_fid == «e.uid») {
+                fAngle => fid«e.uid».rate;
+            }«ENDIF»«ENDFOREACH» 
+            
+            //setOscGain(_fid, fLevel);
+        }            
+    }
+}
+
+//
+// Fiducial bang event handler
+//
+fun void handleBeat(OscEvent _beat) {
+
+}
+
+//
+// Listeners threads sporking
+//
+
+spork ~ connAdd(connAddListener);
+spork ~ connUpdate(connUpdateListener);
+spork ~ connRemove(connRemoveListener);
+«FOREACH this.fiducials.typeSelect(Fiducial) AS e»
+spork ~ add(fidAdd«e.uid», «e.uid»);
+spork ~ update(fidUpdate«e.uid», «e.uid»);
+spork ~ remove(fidRemove«e.uid», «e.uid»);
+spork ~ bang(fidBang«e.uid», «e.uid»);
+spork ~ computeFlux(«e.uid»);
+«ENDFOREACH»
+spork ~ handleBeat(beat);
+
+spork ~ bang(dacBang, -440);
+spork ~ update(dacUpdate, -440);
+spork ~ computeFlux(-440);
+
+while(true) {
+    «settings.processingRate»::ms => now;
+}
+«ENDFILE»
+«ENDDEFINE»
